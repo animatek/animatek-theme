@@ -2,7 +2,7 @@
 /**
  * Theme header template.
  *
- * @package TailPress
+ * @package Animatek
  */
 ?>
 <!DOCTYPE html>
@@ -12,93 +12,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style id="animatek-buttons">
+        .btn-primary,
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            border-radius: 0.75rem;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .btn-primary {
+            background-color: #2170F5;
+            color: #ffffff;
+            border-color: #2170F5;
+            box-shadow: 0 12px 30px -18px rgba(33, 112, 245, 0.6);
+        }
+        .btn-primary:hover {
+            background-color: #1c63d9;
+            border-color: #1c63d9;
+        }
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #334155;
+            border-color: #e2e8f0;
+        }
+        .btn-secondary:hover {
+            border-color: #2170F5;
+            color: #2170F5;
+        }
+        .btn-primary svg,
+        .btn-secondary svg {
+            width: 1.1rem;
+            height: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+        .btn-primary:hover svg,
+        .btn-secondary:hover svg {
+            transform: translateX(4px);
+        }
+    </style>
     <?php wp_head(); ?>
 </head>
-<body <?php body_class('bg-white text-zinc-900 antialiased'); ?>>
+<body <?php body_class('bg-slate-200 text-zinc-900 antialiased'); ?>>
 <?php do_action('tailpress_site_before'); ?>
 
 <div id="page" class="min-h-screen flex flex-col">
     <?php do_action('tailpress_header'); ?>
 
-    <header class="container mx-auto py-6">
-        <div class="md:flex md:justify-between md:items-center">
-            <div class="flex justify-between items-center">
-                <div>
-                    <?php if (has_custom_logo()): ?>
-                        <?php the_custom_logo(); ?>
-                    <?php else: ?>
-                        <div class="flex items-center gap-2">
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="!no-underline lowercase font-medium text-lg">
-                                <?php bloginfo('name'); ?>
-                            </a>
-                            <?php if ($description = get_bloginfo('description')): ?>
-                                <span class="text-sm font-light text-dark/80">|</span>
-                                <span class="text-sm font-light text-dark/80"><?php echo esc_html($description); ?></span>
-                            <?php endif; ?>
-                        </div>
-                    <?php endif; ?>
+    <header class="relative z-50 bg-white/95 border-b border-slate-200/80 shadow-[0_12px_60px_-40px_rgba(15,23,42,0.45)] backdrop-blur">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between gap-4 min-h-[72px] relative">
+                <div class="flex items-center gap-3">
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-3 !no-underline">
+                        <img src="https://animatek.net/wp-content/uploads/2025/05/Logotek2025azulwebp.webp" alt="<?php bloginfo('name'); ?>" class="h-10 w-auto object-contain" loading="lazy" />
+                        <span class="text-lg font-semibold text-slate-900 tracking-tight"><?php bloginfo('name'); ?></span>
+                    </a>
                 </div>
 
                 <?php if (has_nav_menu('primary')): ?>
-                    <div class="md:hidden">
-                        <button type="button" aria-label="Toggle navigation" id="primary-menu-toggle">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                            </svg>
-                        </button>
-                    </div>
+                    <button
+                        type="button"
+                        aria-label="<?php esc_attr_e('Toggle navigation', 'animatek'); ?>"
+                        aria-expanded="false"
+                        aria-controls="primary-navigation"
+                        id="primary-menu-toggle"
+                        class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-3 py-2 text-slate-700 shadow-sm transition hover:border-primary hover:text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
                 <?php endif; ?>
-            </div>
 
-            <div id="primary-navigation" class="hidden md:flex md:bg-transparent gap-6 items-center border border-light md:border-none rounded-xl p-4 md:p-0">
-                <nav>
+                <nav id="primary-navigation" class="hidden flex flex-col md:flex md:flex-row items-start md:items-center gap-4 md:gap-6 absolute left-0 right-0 top-full z-30 bg-white px-6 py-4 border-b border-slate-200 shadow-lg md:static md:border-none md:bg-transparent md:px-0 md:py-0 md:shadow-none" aria-label="<?php esc_attr_e('Primary menu', 'animatek'); ?>">
                     <?php if (current_user_can('administrator') && !has_nav_menu('primary')): ?>
-                        <a href="<?php echo esc_url(admin_url('nav-menus.php')); ?>" class="text-sm text-zinc-600"><?php esc_html_e('Edit Menus', 'tailpress'); ?></a>
+                        <a href="<?php echo esc_url(admin_url('nav-menus.php')); ?>" class="text-sm text-zinc-600"><?php esc_html_e('Edit Menus', 'animatek'); ?></a>
                     <?php else: ?>
                         <?php
-                        wp_nav_menu([
-                            'container_id'    => 'primary-menu',
-                            'container_class' => '',
-                            'menu_class'      => 'md:flex md:-mx-4 [&_a]:!no-underline',
+                        $contact_icon_filter = static function ($title, $item, $args, $depth) {
+                            if ($args->theme_location !== 'primary') {
+                                return $title;
+                            }
+
+                            if (strcasecmp(trim($title), 'Contacto') === 0) {
+                                return '<span class="sr-only">Contacto</span><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75A2.25 2.25 0 0 1 4.5 4.5h15a2.25 2.25 0 0 1 2.25 2.25Z"></path><path d="M21.75 7.017a2.25 2.25 0 0 1-1.02 1.89l-6.75 4.5a2.25 2.25 0 0 1-2.46 0l-6.75-4.5a2.25 2.25 0 0 1-1.02-1.89"></path></svg>';
+                            }
+
+                            return $title;
+                        };
+
+                        add_filter('nav_menu_item_title', $contact_icon_filter, 10, 4);
+
+                        $menu_markup = wp_nav_menu([
+                            'container'       => false,
+                            'menu_class'      => 'flex flex-col md:flex-row md:items-center gap-4 md:gap-6 text-sm font-bold uppercase tracking-wide [&_a]:text-black [&_a]:!no-underline [&_a:hover]:text-primary transition-colors [&_.current-menu-item_a]:text-primary [&_.current-menu-ancestor_a]:text-primary',
                             'theme_location'  => 'primary',
-                            'li_class'        => 'md:mx-4',
+                            'li_class'        => 'relative',
                             'fallback_cb'     => false,
+                            'echo'            => false,
                         ]);
+
+                        remove_filter('nav_menu_item_title', $contact_icon_filter, 10);
+
+                        echo $menu_markup;
                         ?>
                     <?php endif; ?>
-                </nav>
 
-                <div class="inline-block mt-4 md:mt-0"><?php get_search_form(); ?></div>
+                  
+
+      <!--            <div class="hidden lg:inline-block"><?php get_search_form(); ?></div> -->
+                </nav>
             </div>
         </div>
+
+  
     </header>
 
     <div id="content" class="site-content grow">
-        <?php if (is_front_page()): ?>
-            <section class="container mx-auto py-12">
-                <div class="max-w-(--breakpoint-md)">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 md:w-10 mb-4" viewBox="0 0 117.91 117.91">
-                        <path d="M56.39 16.75h14.07l-1.98 12h1.2c1.06-1.54 2.54-3.33 4.43-5.35 1.89-2.02 4.39-3.8 7.47-5.33 3.08-1.53 6.92-2.29 11.52-2.29 5.98 0 11.04 1.51 15.21 4.53 4.16 3.02 7.12 7.37 8.87 13.06.28.92.52 1.87.72 2.85V11.79C117.9 5.28 112.62 0 106.11 0H27.89L25.1 16.75h15.24l-1.88 11.57H23.17l-6.78 40.72c-.45 2.8-.37 4.89.24 6.29.61 1.4 1.55 2.35 2.82 2.84 1.27.5 2.69.75 4.26.75 1.16 0 2.17-.08 3.04-.24.87-.16 1.56-.29 2.07-.39l.72 11.9c-.93.32-2.21.65-3.83.99-1.62.34-3.59.52-5.9.55-3.79.06-7.2-.61-10.24-2.02-3.04-1.41-5.31-3.6-6.82-6.55-1.51-2.96-1.9-6.67-1.16-11.13L8.8 28.32H0v77.81c0 6.51 5.28 11.79 11.79 11.79h27.65L56.39 16.75ZM10.72 16.75 13.49 0H11.8C5.28 0 0 5.28 0 11.79v4.95h10.72Z"/>
-                        <path d="M117.84 53.9c-1.32 8-3.79 14.85-7.42 20.55-3.63 5.7-8.02 10.09-13.18 13.16-5.16 3.07-10.72 4.6-16.7 4.6-4.5 0-8.05-.76-10.65-2.27-2.6-1.51-4.53-3.28-5.78-5.3s-2.19-3.82-2.8-5.4h-.92l-6.45 38.66h52.18c6.51 0 11.79-5.28 11.79-11.79V53.42c-.02.16-.05.31-.07.47Z"/>
-                        <path d="M98.23 31.4c-2.51-2.25-5.93-3.37-10.27-3.37s-7.9 1.08-11.16 3.23-5.94 5.16-8.05 9.01c-2.1 3.86-3.57 8.35-4.41 13.49-.84 5.2-.84 9.77 0 13.69s2.51 6.98 5.04 9.18c2.52 2.2 5.86 3.3 10 3.3s8.08-1.15 11.33-3.45c3.24-2.3 5.94-5.42 8.07-9.37 2.14-3.95 3.64-8.4 4.51-13.35.77-4.88.75-9.27-.07-13.16-.82-3.89-2.48-6.96-4.99-9.2Z"/>
-                    </svg>
-                    <div class="[&_a]:text-primary">
-                        <h1 class="leading-tight text-3xl md:text-5xl font-medium tracking-tight text-balance text-zinc-950">
-                            Rapidly build your next WordPress theme with Tailwind CSS
-                        </h1>
-                        <p class="my-6 text-lg md:text-xl text-zinc-600 leading-8">
-                            <a href="https://tailpress.io">TailPress</a> is a <a href="https://tailwindcss.com">Tailwind CSS</a> flavoured <a href="https://wordpress.org">WordPress</a>
-                            boilerplate theme. It's your go-to starting point for building custom WordPress themes with modern tools and practices.
-                        </p>
-                    </div>
-                    <div>
-                        <a href="https://tailpress.io" class="inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition bg-dark text-white hover:bg-dark/90 !no-underline">
-                            Documentation
-                        </a>
-                    </div>
-                </div>
-            </section>
-        <?php endif; ?>
-
         <?php do_action('tailpress_content_start'); ?>
         <main>

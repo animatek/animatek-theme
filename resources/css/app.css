@@ -1,8 +1,17 @@
 @import 'tailwindcss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import './theme.css';
 @import './utilities.css';
 @import './custom.css' layer(utilities);
 
+@source '../../*.php';
+@source '../../template-parts/**/*.php';
+@source '../../src/**/*.php';
+@source '../**/*.{js,jsx,ts,tsx,vue,php}';
 @source '../../vendor/tailpress/framework/**/*.php';
 @source '../../vendor/tailpress/framework/**/**/*.php';
 
@@ -15,16 +24,45 @@
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
   looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-zinc-200, currentColor);
-  }
+    body {
+        @apply bg-slate-50 text-slate-900 font-sans antialiased font-normal;
+    }
+
+    a {
+        @apply text-primary transition-colors duration-150;
+    }
+
+    a:hover {
+        @apply text-primary/80;
+    }
+
+    h1,
+    h2 {
+        @apply text-slate-900 font-extrabold;
+    }
+
+    h3 {
+        @apply text-slate-900 font-bold;
+    }
+
+    h4,
+    h5,
+    h6 {
+        @apply text-slate-900 font-semibold;
+    }
+
+    strong,
+    b {
+        @apply font-semibold;
+    }
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-zinc-200, currentColor);
+    }
 }

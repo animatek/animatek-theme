@@ -5,11 +5,11 @@ export default defineConfig(({ command }) => {
     const isBuild = command === 'build';
 
     return {
-        base: isBuild ? '/wp-content/themes/tailpress/dist/' : '/',
+        base: isBuild ? '/wp-content/themes/animatek-tailpress/dist/' : '/',
         server: {
             port: 3000,
             cors: true,
-            origin: 'http://tailpress.test',
+            origin: 'http://animatek.test',
         },
         build: {
             manifest: true,

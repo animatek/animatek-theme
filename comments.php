@@ -2,7 +2,7 @@
 /**
  * Comments template.
  *
- * @package TailPress
+ * @package Animatek
  */
 
 if (post_password_required()) {
@@ -20,7 +20,7 @@ if (post_password_required()) {
                     '%1$s comments',
                     get_comments_number(),
                     'comments title',
-                    'tailpress'
+                    'animatek'
                 )),
                 esc_html(number_format_i18n(get_comments_number()))
             );
@@ -40,19 +40,19 @@ if (post_password_required()) {
         </ol>
 
         <?php if (get_comment_pages_count() > 1 && get_option('page_comments')): ?>
-            <nav class="comment-navigation flex justify-between" id="comment-nav-above" aria-label="<?php esc_attr_e('Comment navigation', 'tailpress'); ?>">
+            <nav class="comment-navigation flex justify-between" id="comment-nav-above" aria-label="<?php esc_attr_e('Comment navigation', 'animatek'); ?>">
                 <div class="nav-previous">
-                    <?php previous_comments_link(esc_html__('Older Comments &larr;', 'tailpress')); ?>
+                    <?php previous_comments_link(esc_html__('Older Comments &larr;', 'animatek')); ?>
                 </div>
                 <div class="nav-next">
-                    <?php next_comments_link(esc_html__('Newer Comments &rarr;', 'tailpress')); ?>
+                    <?php next_comments_link(esc_html__('Newer Comments &rarr;', 'animatek')); ?>
                 </div>
             </nav>
         <?php endif; ?>
     <?php endif; ?>
 
     <?php if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')): ?>
-        <p class="no-comments text-zinc-600"><?php esc_html_e('Comments are closed.', 'tailpress'); ?></p>
+        <p class="no-comments text-zinc-600"><?php esc_html_e('Comments are closed.', 'animatek'); ?></p>
     <?php endif; ?>
 
     <?php
@@ -65,22 +65,22 @@ if (post_password_required()) {
             'fields' => apply_filters('comment_form_default_fields', [
                 'author' =>
                     '<p class="comment-form-author">' .
-                    '<input id="author" class="bg-light w-full px-4 py-3 mb-4 rounded-xl text-sm" placeholder="' . esc_attr__('Your Name*', 'text-domain') . '" name="author" type="text" value="' . esc_attr($commenter['comment_author']) .
+                    '<input id="author" class="bg-light w-full px-4 py-3 mb-4 rounded-xl text-sm" placeholder="' . esc_attr__('Your Name*', 'animatek') . '" name="author" type="text" value="' . esc_attr($commenter['comment_author']) .
                     '" size="30"' . $aria_req . ' /></p>',
 
                 'email' =>
                     '<p class="comment-form-email">' .
-                    '<input id="email" class="bg-light w-full px-4 py-3 mb-4 rounded-xl text-sm" placeholder="' . esc_attr__('Your Email Address*', 'text-domain') . '" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) .
+                    '<input id="email" class="bg-light w-full px-4 py-3 mb-4 rounded-xl text-sm" placeholder="' . esc_attr__('Your Email Address*', 'animatek') . '" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) .
                     '" size="30"' . $aria_req . ' /></p>',
 
                 'url' =>
                     '<p class="comment-form-url">' .
-                    '<input id="url" class="bg-light w-full px-4 py-3 mb-4 rounded-xl text-sm" placeholder="' . esc_attr__('Your Website URL', 'text-domain') . '" name="url" type="text" value="' . esc_attr($commenter['comment_author_url']) .
+                    '<input id="url" class="bg-light w-full px-4 py-3 mb-4 rounded-xl text-sm" placeholder="' . esc_attr__('Your Website URL', 'animatek') . '" name="url" type="text" value="' . esc_attr($commenter['comment_author_url']) .
                     '" size="30" /></p>'
             ]),
             'title_reply_before' => '<h3 id="reply-title" class="comment-reply-title text-2xl font-bold mb-2">',
             'class_submit'      => 'bg-dark rounded-full px-4 py-1.5 text-sm font-semibold text-light my-4',
-            'comment_field'     => '<textarea id="comment" name="comment" class="bg-light w-full px-4 py-3 my-2 rounded-xl text-sm" aria-required="true" placeholder="' . esc_attr__('Your comment', 'text-domain') . '"></textarea>',
+            'comment_field'     => '<textarea id="comment" name="comment" class="bg-light w-full px-4 py-3 my-2 rounded-xl text-sm" aria-required="true" placeholder="' . esc_attr__('Your comment', 'animatek') . '"></textarea>',
             'logged_in_as'      => '<p class="logged-in-as mb-4">',
         ]);
     ?>

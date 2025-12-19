@@ -4,23 +4,21 @@
   font-size: var(--text-lg);
   line-height: var(--text-lg--line-height);
 
-  :where(
-      .entry-content > *:not(li),
-      .block-editor-block-list__layout > *:not(li)
-    ) {
+  :where(.entry-content > *:not(li),
+    .block-editor-block-list__layout > *:not(li)) {
     margin-top: --spacing(6);
     margin-bottom: --spacing(6);
   }
 
   :where(h2) {
-    font-weight: var(--font-weight-semibold);
+    font-weight: 800;
     font-size: var(--text-2xl);
     line-height: var(--text-2xl--line-height);
     margin-top: --spacing(12);
   }
 
   :where(h3) {
-    font-weight: var(--font-weight-semibold);
+    font-weight: 700;
     font-size: var(--text-xl);
     line-height: var(--text-xl--line-height);
     margin-top: --spacing(8);
@@ -61,11 +59,11 @@
 
   :where(ol > li)::marker {
     font-size: var(--text-base);
-    font-weight: var(--font-weight-semibold);
+    font-weight: 600;
   }
 
   :where(strong) {
-    font-weight: var(--font-weight-semibold);
+    font-weight: 600;
   }
 
   :where(figure) {
@@ -80,4 +78,78 @@
   :where(li > :last-child) {
     margin-bottom: 0 !important;
   }
+}
+
+/* Pill estilo "glass" adaptativo (Claro / Oscuro) */
+.a-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: fit-content;
+  box-sizing: border-box;
+  padding: 12px 18px;
+
+  border-radius: 9999px;
+  margin: 16px 0;
+  backdrop-filter: blur(8px);
+
+  /* Defaults (Modo Claro / Light Mode) */
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  /* slate-300 transparente */
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+
+/* Modo Oscuro / Dark Mode */
+.dark .a-pill {
+  border: 1px solid rgba(148, 163, 184, .18);
+  background: rgba(26, 37, 56, .65);
+  /* #1a2538 con transparencia */
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .05),
+    0 0 0 1px rgba(0, 0, 0, .12);
+}
+
+.a-pill__icon {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+}
+
+.a-pill__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.a-pill__icon circle {
+  fill: #2563eb;
+}
+
+.a-pill__icon path {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.a-pill__text {
+  flex: 1;
+  min-width: 0;
+  font-size: 15px;
+  line-height: 1.25;
+
+  /* Texto Modo Claro */
+  color: rgba(51, 65, 85, 0.95);
+  /* slate-700 */
+}
+
+.dark .a-pill__text {
+  /* Texto Modo Oscuro */
+  color: rgba(226, 232, 240, .95);
 }

@@ -2,23 +2,29 @@
 /**
  * Single post template file.
  *
- * @package TailPress
+ * @package Animatek
  */
 
 get_header();
 ?>
 
-<div class="container my-8 mx-auto">
-    <?php if (have_posts()): ?>
-        <?php while (have_posts()): the_post(); ?>
-            <?php get_template_part('template-parts/content', 'single'); ?>
+<main class="min-h-screen bg-slate-50 pt-16 pb-10 md:pt-20 md:pb-16">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+        <?php if (have_posts()): ?>
+            <?php while (have_posts()): the_post(); ?>
+           
+                <?php get_template_part('template-parts/content', 'single'); ?>
+                
+            <?php endwhile; ?>
+        <?php endif; ?>
+        
+    </div>
 
-            <?php if (comments_open() || get_comments_number()): ?>
-                <?php comments_template(); ?>
-            <?php endif; ?>
-        <?php endwhile; ?>
-    <?php endif; ?>
-</div>
+
+    
+
+
+</main>
 
 <?php
 get_footer();

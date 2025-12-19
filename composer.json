@@ -1,13 +1,13 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "tailpress/tailpress",
-    "description": "The Tailwind CSS powered WordPress boilerplate theme.",
+    "name": "animatek/theme",
+    "description": "Tema WordPress de Animatek impulsado por Tailwind CSS.",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jeffrey van Rossum",
-            "email": "jeffrey@vanrossum.dev"
+            "name": "Javier Melgar",
+            "email": "info@animatek.net"
         }
     ],
     "autoload": {

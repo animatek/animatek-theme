@@ -1,15 +1,15 @@
 {
-	"name": "tailpress",
+	"name": "animatek-theme",
 	"version": "5.0.0",
-	"description": "Boilerplate WordPress theme with Tailwind CSS.",
-	"author": "Jeffrey van Rossum",
+	"description": "Tema WordPress personalizado para Animatek con Tailwind CSS.",
+	"author": "Javier Melgar (Animatek)",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/tailpress/tailpress"
+		"url": "https://animatek.net"
 	},
-	"theme_uri": "https://github.com/tailpress/tailpress",
-	"author_uri": "https://tailpress.io",
-	"text_domain": "tailpress",
+	"theme_uri": "https://animatek.net",
+	"author_uri": "https://animatek.net",
+	"text_domain": "animatek",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite",
