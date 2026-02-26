@@ -1,7 +1,7 @@
 <section class="max-w-7xl mx-auto px-6 mb-[6.25rem]">
     <div class="bg-white border border-slate-200 rounded-[1.75rem] shadow-sm p-8 md:p-10 lg:p-16">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">Lo que dicen los alumnos</h2>
+            <h2 class="mb-4">Lo que dicen los alumnos</h2>
             <p class="text-lg text-slate-600 max-w-2xl mx-auto">
                 Alumnos hablando de claridad, método y progreso real en su música.
             </p>
@@ -85,20 +85,9 @@
                         </p>
                     </blockquote>
                     
-                    <!-- Result Box -->
-                    <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 mt-auto">
-                        <p class="text-xs font-medium text-slate-700 leading-snug">
-                            <strong class="text-slate-900 block mb-1">Lo que destaca:</strong>
-                            <?php echo $item['result']; ?>
-                        </p>
-                    </div>
                 </div>
             <?php endforeach; ?>
         </div>
-
-
-
-        <?php get_template_part('template-parts/block-bitwig'); ?>
 
     </div>
 </section>

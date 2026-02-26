@@ -68,16 +68,13 @@ get_header();
                                     </svg>
                                 </a>
                             </div>
-                            
                         </div>
-                    </div>                 
-
-
+                    </div>
 
                     <div class="bg-white border border-slate-200 rounded-2xl shadow-lg shadow-primary/5 p-6 sm:p-8">
                         <div class="space-y-2 mb-6">
                             <p class="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Formulario</p>
-                            <h2 class="text-2xl font-extrabold text-slate-900">Envíame un mensaje</h2>
+                            <h2>Envíame un mensaje</h2>
                             <p class="text-sm text-slate-600">Indica contexto, nivel y horario preferido. Respondo normalmente en 24-48h.</p>
                         </div>
 
@@ -85,8 +82,6 @@ get_header();
                             <?php echo do_shortcode('[fluentform id="1"]'); ?>
                         </div>
                     </div>
-
-                    
                 </div>
             </div>
         </div>

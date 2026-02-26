@@ -72,7 +72,7 @@ get_header();
         <div class="max-w-6xl mx-auto px-6 space-y-10">
             <div class="text-center max-w-3xl mx-auto space-y-3">
                 <p class="text-xs uppercase tracking-[0.14em] font-semibold text-primary">Qué incluye</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Contenido del pack</h2>
+                <h2>Contenido del pack</h2>
                 <p class="text-lg text-slate-600">Texturas profundas, graves listos y proyectos para arrancar ideas sin perder tiempo.</p>
             </div>
 
@@ -144,7 +144,7 @@ get_header();
         <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
             <div class="space-y-5">
                 <p class="text-xs uppercase tracking-[0.14em] font-semibold text-primary">Cómo sacarle partido</p>
-                <h2 class="text-3xl font-bold text-slate-900">Hazlo tuyo rápido</h2>
+                <h2>Hazlo tuyo rápido</h2>
                 <p class="text-base text-slate-600 max-w-2xl">Ideas prácticas para que el pack encaje en tu flujo sin fricción.</p>
                 <ul class="space-y-4">
                     <li class="flex gap-3">
@@ -197,7 +197,7 @@ get_header();
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <div class="text-center space-y-4 mb-10">
                 <p class="text-xs uppercase tracking-[0.14em] font-semibold text-primary">Descarga inmediata</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Descarga gratis el Sound Pack</h2>
+                <h2>Descarga gratis el Sound Pack</h2>
                 <p class="text-slate-600 text-lg">Completa el formulario y recibe el pack en tu correo.</p>
             </div>
 

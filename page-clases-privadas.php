@@ -7,74 +7,150 @@ get_header();
 ?>
 
 <main id="primary" class="bg-slate-200 text-slate-900">
-    <section class="relative overflow-hidden mb-[6.25rem] px-6 sm:px-10 py-20 text-slate-50" style="background-image: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.65)), url('https://animatek.net/wp-content/uploads/2025/05/Bono_hora.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="max-w-7xl mx-auto grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
-            <div class="space-y-6">
-                <span class="inline-flex items-center gap-2 px-3 py-1 text-xs font-bold tracking-[0.18em] uppercase border border-white/20 rounded-full bg-white/10">
-                    Clases privadas 1:1
-                </span>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
-                    Clases Privadas con Animatek
-                </h1>
-                <p class="text-xl text-slate-200 leading-relaxed">
-                    Producción musical con Bitwig, VCV Rack y síntesis modular. Sesiones online personalizadas, profundas y a tu ritmo.
+
+    <!-- SECCIÓN 1 · HERO + CTA GRATUITO -->
+    <section class="relative pt-8 pb-10 lg:pt-12 lg:pb-16 overflow-hidden bg-slate-900 text-slate-50 mb-0">
+        <!-- Background Image & Overlay -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('https://animatek.net/wp-content/uploads/2025/05/Bono_hora.webp');"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/85 to-slate-800/80"></div>
+            <div class="absolute top-0 right-0 -mr-32 -mt-32 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] mix-blend-overlay"></div>
+            <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px] mix-blend-overlay"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 text-center max-w-5xl">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white leading-tight">
+                Clases privadas de producción con <span class="text-primary">Bitwig</span> y <span class="text-primary">VCV Rack</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed font-light">
+                Sesiones 1:1 online, adaptadas a tu proyecto. Feedback directo, plan personalizado y seguimiento real.
+            </p>
+
+            <div class="flex flex-col items-center gap-6">
+                <a href="<?php echo esc_url(home_url('/consulta-gratuita')); ?>"
+                    class="group relative inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-white text-base md:text-lg font-bold rounded-full hover:bg-blue-600 transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1">
+                    Reservar consulta gratuita de 15 min
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+
+                <!-- Bitwig Certified Trainer badge -->
+                <img src="https://animatek.net/wp-content/uploads/2025/04/Certified-Trainer-Banner.webp"
+                     alt="Bitwig Certified Trainer"
+                     class="h-8 md:h-10 w-auto opacity-70">
+
+                <p class="text-sm text-slate-400 max-w-lg mx-auto leading-relaxed">
+                    Sin compromiso. Hablamos de tu situaci&oacute;n, tu nivel y tus objetivos. Si encaja, dise&ntilde;o un plan a tu medida.
                 </p>
-                <p class="text-lg text-slate-200/90 leading-relaxed">
-                    Aprende con un Certified Trainer de Bitwig. Feedback directo, seguimiento y un plan adaptado a tus objetivos creativos.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#planes" class="btn-primary">
-                        Ver planes y precios
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"/>
-                        </svg>
-                    </a>
-                    <a href="#como-funciona" class="btn-secondary">
-                        Cómo funciona
-                    </a>
-                </div>
-            </div>
-            <div class="relative">
-                <div class="absolute inset-0 rounded-3xl bg-white/5 blur-3xl"></div>
-                <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                    <img src="https://animatek.net/wp-content/uploads/2025/04/Clasesonline.webp" alt="Clases online Animatek" class="w-full h-full object-cover">
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-6 py-14 bg-slate-100 rounded-[2rem] border border-slate-200 shadow-sm mb-[6.25rem]" id="planes">
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-[0.12em]">
-                Elige tu ritmo
-            </div>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Planes flexibles para avanzar</h2>
-            <p class="text-lg text-slate-700 leading-relaxed">
-                Clase suelta para dudas concretas o bonos para continuidad. Incluye opción de videollamada gratuita de 15 minutos para ajustar tu hoja de ruta.
-            </p>
-            <a href="<?php echo esc_url(home_url('/contacto')); ?>" class="btn-secondary">
-                Agendar llamada gratuita de 15 min
-            </a>
+    <!-- SECCIÓN 2 · CÓMO FUNCIONA -->
+    <section class="max-w-6xl mx-auto px-6 py-16 lg:py-24">
+        <div class="text-center mb-12">
+            <h2 class="mb-4">Cómo funcionan las clases</h2>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">Un proceso claro y adaptado a ti, desde el primer contacto hasta que dominas tu setup.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
-            <div class="bg-white border border-slate-200 rounded-2xl p-8 flex flex-col hover:border-primary transition-all duration-300 hover:-translate-y-2 shadow-sm hover:shadow-lg">
+        <div class="grid md:grid-cols-2 gap-6">
+            <?php
+            $steps = [
+                [
+                    'title' => 'Consulta gratuita',
+                    'desc'  => 'Nos conocemos en 15 minutos. Me cuentas dónde estás, qué herramientas usas y qué quieres conseguir.',
+                    'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>',
+                    'color' => 'bg-primary/10 text-primary border-primary/20',
+                ],
+                [
+                    'title' => 'Diagnóstico y plan',
+                    'desc'  => 'Analizo tu nivel, tu flujo y tus bloqueos. Preparo un plan de sesiones adaptado a ti.',
+                    'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>',
+                    'color' => 'bg-amber-50 text-amber-600 border-amber-200',
+                ],
+                [
+                    'title' => 'Sesiones 1:1 por videollamada',
+                    'desc'  => 'Trabajamos sobre tu proyecto real. Nada de plantillas: cada sesión se diseña para lo que necesitas esa semana.',
+                    'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>',
+                    'color' => 'bg-emerald-50 text-emerald-600 border-emerald-200',
+                ],
+                [
+                    'title' => 'Seguimiento entre sesiones',
+                    'desc'  => 'Tareas concretas, soporte por email/Discord y ajustes sobre la marcha para que avances de verdad.',
+                    'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>',
+                    'color' => 'bg-rose-50 text-rose-600 border-rose-200',
+                ],
+            ];
+            foreach ($steps as $i => $step): ?>
+                <div class="group bg-white border-2 <?php echo esc_attr($step['color']); ?> rounded-2xl p-8 hover:shadow-lg transition-all relative overflow-hidden">
+                    <!-- Decorative number -->
+                    <div class="absolute top-4 right-4 text-6xl font-black opacity-5"><?php echo $i + 1; ?></div>
+                    
+                    <div class="relative z-10">
+                        <!-- Icon -->
+                        <div class="w-14 h-14 rounded-xl <?php echo esc_attr($step['color']); ?> flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <?php echo $step['icon']; ?>
+                            </svg>
+                        </div>
+                        
+                        <!-- Content -->
+                        <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo esc_html($step['title']); ?></h3>
+                        <p class="text-slate-600 leading-relaxed"><?php echo esc_html($step['desc']); ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3 · PLANES Y PRECIOS -->
+    <section id="planes" class="max-w-7xl mx-auto px-6 pb-16 lg:pb-24">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-8">
+            <h2>Elige tu plan</h2>
+            <p class="text-lg text-slate-600 leading-relaxed">
+                Desde una sesi&oacute;n puntual hasta un programa completo. Todos incluyen la opci&oacute;n de empezar con una consulta gratuita.
+            </p>
+        </div>
+
+        <!-- Consulta gratuita CTA -->
+        <div class="max-w-2xl mx-auto text-center mb-12">
+            <div class="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border border-slate-200 shadow-sm">
+                <p class="text-lg text-slate-700 mb-3">&iquest;No sabes qu&eacute; plan elegir? No pasa nada.</p>
+                <a href="<?php echo esc_url(home_url('/consulta-gratuita')); ?>"
+                    class="inline-flex items-center gap-2 text-primary font-bold hover:underline">
+                    Reservar consulta gratuita de 15 min
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- PLAN 1 · Sesión puntual -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 flex flex-col hover:border-primary/30 transition-all shadow-sm hover:shadow-lg">
                 <div class="mb-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Sesión puntual 1:1</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Para desbloquear un problema concreto en tu proyecto.</p>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Sesi&oacute;n puntual</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Tienes una duda concreta o quieres probar las clases antes de comprometerte.</p>
                 </div>
                 <div class="mb-6">
-                    <span class="text-4xl font-bold text-slate-900">40 €/hora</span>
+                    <span class="text-4xl font-bold text-slate-900">40 &euro;</span>
+                    <span class="text-slate-500 text-sm">/hora</span>
                 </div>
                 <ul class="mb-8 space-y-3 text-slate-700 text-sm flex-1">
                     <?php
-                    $clase_suelta = [
-                        'Resolución de problemas en VCV Rack, Bitwig o Reaktor.',
-                        'Revisión de patches, proyectos o flujo de trabajo.',
-                        'Ajustes de configuración (audio, routing, directo híbrido).',
-                        'Ideal para probar las clases 1:1 antes de un programa más largo.',
+                    $plan1 = [
+                        'Resolución de problemas en VCV Rack, Bitwig o Reaktor',
+                        'Revisión de patches, proyectos o flujo de trabajo',
+                        'Ajustes de configuración (audio, routing, directo híbrido)',
                     ];
-                    foreach ($clase_suelta as $item): ?>
+                    foreach ($plan1 as $item): ?>
                         <li class="flex items-start gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
@@ -83,33 +159,38 @@ get_header();
                         </li>
                     <?php endforeach; ?>
                 </ul>
-                <a href="https://animatek.net/pago/?line_items%5B0%5D%5Bprice_id%5D=c5b923cb-2139-4cde-a7b5-e96370391c0e&line_items%5B0%5D%5Bquantity%5D=1" target="_blank" class="w-full block text-center bg-slate-100 border border-slate-200 hover:bg-primary hover:text-white hover:border-primary text-slate-700 font-semibold py-3 px-4 rounded-xl transition-all">
-                    Reservar sesión
+                <a href="https://animatek.net/pago/?line_items%5B0%5D%5Bprice_id%5D=c5b923cb-2139-4cde-a7b5-e96370391c0e&line_items%5B0%5D%5Bquantity%5D=1" target="_blank"
+                    class="w-full block text-center bg-slate-100 border border-slate-200 hover:bg-primary hover:text-white hover:border-primary text-slate-700 font-semibold py-3 px-4 rounded-xl transition-all">
+                    Reservar sesi&oacute;n
                 </a>
             </div>
 
-            <div class="bg-white border-2 border-primary rounded-2xl p-8 flex flex-col shadow-lg shadow-primary/15 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+
+            <!-- PLAN 3 · Programa 5 horas -->
+            <div class="bg-white border-2 border-primary rounded-2xl p-8 flex flex-col shadow-lg shadow-primary/15 relative overflow-hidden">
                 <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-primary to-cyan-400"></div>
-                <div class="absolute top-6 inset-x-0 flex justify-center">
-                    <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Promo 2026 – plazas limitadas</span>
+                <div class="absolute top-4 right-4">
+                    <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Promo &mdash; 3 plazas a 120 &euro;</span>
                 </div>
-                <div class="mb-6 mt-8">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Programa 5 horas – Arranca tu sistema modular</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">En 4–5 sesiones dejamos listo tu entorno para crear música sin perderte.</p>
+                <div class="mb-6 mt-4">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Programa 5 horas &mdash; Arranca tu sistema modular</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Quieres montar tu entorno de trabajo en VCV Rack o Bitwig y empezar a crear con criterio.</p>
                 </div>
                 <div class="mb-6">
-                    <span class="text-4xl font-bold text-slate-900">150 €</span>
-                    <span class="text-green-700 text-xs font-bold ml-2 bg-green-100 px-2 py-1 rounded">Ahorras 50 €</span>
+                    <span class="text-4xl font-bold text-slate-900">150 &euro;</span>
+                    <span class="text-sm text-slate-400 line-through ml-2">200 &euro;</span>
+                    <span class="text-green-700 text-xs font-bold ml-2 bg-green-100 px-2 py-1 rounded">Ahorras 50 &euro;</span>
                 </div>
                 <ul class="mb-8 space-y-3 text-slate-700 text-sm flex-1">
                     <?php
-                    $bono5 = [
-                        'Diseñamos tu sistema base en VCV Rack o Bitwig adaptado a tu estilo.',
-                        'Te llevas un patch o plantilla de trabajo listo para reutilizar en tus proyectos.',
-                        'Plan de trabajo entre sesiones (no solo hablar, sino avanzar).',
-                        'Horarios flexibles y soporte por email/Discord entre sesiones.',
+                    $plan3 = [
+                        '4-5 sesiones 1:1 por videollamada',
+                        'Diseñamos tu sistema base adaptado a tu estilo',
+                        'Te llevas un patch o plantilla de trabajo reutilizable',
+                        'Plan de trabajo entre sesiones (no solo hablar, sino avanzar)',
+                        'Horarios flexibles y soporte por email/Discord entre sesiones',
                     ];
-                    foreach ($bono5 as $item): ?>
+                    foreach ($plan3 as $item): ?>
                         <li class="flex items-start gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
@@ -118,29 +199,33 @@ get_header();
                         </li>
                     <?php endforeach; ?>
                 </ul>
-                <a href="https://animatek.net/pago/?line_items%5B0%5D%5Bprice_id%5D=ed8ca26e-f74a-4c96-9311-f587634d5fb8&line_items%5B0%5D%5Bquantity%5D=1" target="_blank" class="w-full block text-center bg-primary hover:bg-primary/90 text-white font-bold py-4 px-4 rounded-xl shadow-lg shadow-primary/30 transition-all">
+                <a href="https://animatek.net/pago/?line_items%5B0%5D%5Bprice_id%5D=ed8ca26e-f74a-4c96-9311-f587634d5fb8&line_items%5B0%5D%5Bquantity%5D=1" target="_blank"
+                    class="w-full block text-center bg-primary hover:bg-primary/90 text-white font-bold py-4 px-4 rounded-xl shadow-lg shadow-primary/30 transition-all">
                     Empezar programa 5h
                 </a>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl p-8 flex flex-col hover:border-primary transition-all duration-300 hover:-translate-y-2 shadow-sm hover:shadow-lg">
+            <!-- PLAN 4 · Mentoría 10 horas -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 flex flex-col hover:border-primary/30 transition-all shadow-sm hover:shadow-lg">
                 <div class="mb-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Mentoría 10h – VCV Rack + Bitwig completo</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Domina VCV Rack desde cero, intégralo con Bitwig y construye un flujo de trabajo sólido en 10 sesiones 1:1.</p>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Mentor&iacute;a 10 horas &mdash; VCV Rack + Bitwig completo</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Quieres dominar VCV Rack desde cero, integrarlo con Bitwig y terminar con un proyecto publicable.</p>
                 </div>
                 <div class="mb-6">
-                    <span class="text-4xl font-bold text-slate-900">295 €</span>
-                    <span class="text-green-700 text-xs font-bold ml-2 bg-green-100 px-2 py-1 rounded">Ahorras 105 €</span>
+                    <span class="text-4xl font-bold text-slate-900">295 &euro;</span>
+                    <span class="text-sm text-slate-400 line-through ml-2">400 &euro;</span>
+                    <span class="text-green-700 text-xs font-bold ml-2 bg-green-100 px-2 py-1 rounded">Ahorras 105 &euro;</span>
                 </div>
                 <ul class="mb-8 space-y-3 text-slate-700 text-sm flex-1">
                     <?php
-                    $bono10 = [
-                        'Fundamentos claros de VCV Rack y trabajo por módulos.',
-                        'Integración real con Bitwig: routing, grabación y mezcla.',
-                        'Proyecto final: tema o mini set terminado y listo para publicar.',
-                        'Base de trabajo replicable para futuros proyectos, sin pasarte meses saltando entre vídeos.',
+                    $plan4 = [
+                        '10 sesiones 1:1 por videollamada',
+                        'Fundamentos claros de VCV Rack y trabajo por módulos',
+                        'Integración real con Bitwig: routing, grabación y mezcla',
+                        'Proyecto final: tema o mini set terminado y listo para publicar',
+                        'Base de trabajo replicable para futuros proyectos',
                     ];
-                    foreach ($bono10 as $item): ?>
+                    foreach ($plan4 as $item): ?>
                         <li class="flex items-start gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
@@ -149,39 +234,31 @@ get_header();
                         </li>
                     <?php endforeach; ?>
                 </ul>
-                <a href="https://animatek.net/pago/?line_items%5B0%5D%5Bprice_id%5D=94b501cc-4ed9-4526-bbb8-b1389173fd90&line_items%5B0%5D%5Bquantity%5D=1" target="_blank" class="w-full block text-center bg-slate-100 border border-slate-200 hover:bg-primary hover:text-white hover:border-primary text-slate-700 font-semibold py-3 px-4 rounded-xl transition-all">
+                <a href="https://animatek.net/pago/?line_items%5B0%5D%5Bprice_id%5D=94b501cc-4ed9-4526-bbb8-b1389173fd90&line_items%5B0%5D%5Bquantity%5D=1" target="_blank"
+                    class="w-full block text-center bg-slate-100 border border-slate-200 hover:bg-primary hover:text-white hover:border-primary text-slate-700 font-semibold py-3 px-4 rounded-xl transition-all">
                     Unirme al programa 10h
                 </a>
-                <p class="text-xs text-slate-500 text-center mt-3">Ideal para productores con DAW que quieren integrar un sistema modular, usuarios de VCV Rack que necesitan afianzar conceptos avanzados, y principiantes serios que buscan una base sólida con acompañamiento paso a paso.</p>
             </div>
         </div>
+
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 mb-[6.25rem]">
-        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-8">
-            <div>
-                <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-[0.1em] border border-primary/20">
-                    ¿Qué puedes aprender?
-                </p>
-                <h2 class="text-3xl font-extrabold text-slate-900 mt-3">Dominio técnico y creatividad sin límites.</h2>
-            </div>
+    <!-- SECCIÓN 4 · QUÉ PUEDES APRENDER -->
+    <section class="max-w-7xl mx-auto px-6 pb-16 lg:pb-24">
+        <div class="text-center mb-10">
+            <h2>Dominio t&eacute;cnico y creatividad sin l&iacute;mites</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             <div class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition">
                 <div class="flex items-center gap-3 mb-4">
                     <span class="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="4" y="4" width="6" height="6" rx="1.5"/>
-                            <rect x="14" y="4" width="6" height="6" rx="1.5"/>
-                            <rect x="4" y="14" width="6" height="6" rx="1.5"/>
-                            <rect x="14" y="14" width="6" height="6" rx="1.5"/>
+                            <rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/>
                         </svg>
                     </span>
                     <h3 class="text-lg font-bold text-slate-900">Bitwig Studio</h3>
                 </div>
-                <p class="text-sm leading-relaxed text-slate-600">
-                    Automatización, The Grid, composición avanzada y workflows híbridos.
-                </p>
+                <p class="text-sm leading-relaxed text-slate-600">Automatizaci&oacute;n, The Grid, composici&oacute;n avanzada y workflows h&iacute;bridos.</p>
             </div>
 
             <div class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition">
@@ -193,9 +270,7 @@ get_header();
                     </span>
                     <h3 class="text-lg font-bold text-slate-900">VCV Rack</h3>
                 </div>
-                <p class="text-sm leading-relaxed text-slate-600">
-                    Secuenciación generativa, síntesis modular e integración con DAW.
-                </p>
+                <p class="text-sm leading-relaxed text-slate-600">Secuenciaci&oacute;n generativa, s&iacute;ntesis modular e integraci&oacute;n con DAW.</p>
             </div>
 
             <div class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition">
@@ -206,11 +281,9 @@ get_header();
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 18h18"/>
                         </svg>
                     </span>
-                    <h3 class="text-lg font-bold text-slate-900">Producción</h3>
+                    <h3 class="text-lg font-bold text-slate-900">Producci&oacute;n</h3>
                 </div>
-                <p class="text-sm leading-relaxed text-slate-600">
-                    Workflow creativo, mezcla, diseño sonoro y estructura de tracks.
-                </p>
+                <p class="text-sm leading-relaxed text-slate-600">Workflow creativo, mezcla, dise&ntilde;o sonoro y estructura de tracks.</p>
             </div>
 
             <div class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition">
@@ -224,71 +297,18 @@ get_header();
                     </span>
                     <h3 class="text-lg font-bold text-slate-900">Hardware</h3>
                 </div>
-                <p class="text-sm leading-relaxed text-slate-600">
-                    Digitakt, Octatrack, Eurorack, controladores MIDI y setup live.
-                </p>
+                <p class="text-sm leading-relaxed text-slate-600">Digitakt, Octatrack, Eurorack, controladores MIDI y setup live.</p>
             </div>
         </div>
     </section>
 
-    <section id="como-funciona" class="max-w-7xl mx-auto px-6 mb-[6.25rem] grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-8">
-        <div class="space-y-5 bg-slate-50 rounded-[1.75rem] border border-slate-200 p-8 shadow-sm">
-            <div class="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-primary/10 text-primary font-semibold text-xs uppercase tracking-[0.1em]">
-                Paso a paso
-            </div>
-            <h3 class="text-2xl font-bold text-slate-900">Cómo funcionan las clases</h3>
-            <p class="text-slate-700 text-lg leading-relaxed">Proceso simple y enfocado en resultados desde el primer día.</p>
-            <div class="space-y-5">
-                <?php
-                $steps = [
-                    'Primera toma de contacto' => 'Gratuita o incluida en la primera sesión para conocernos.',
-                    'Análisis personalizado' => 'Reviso tu nivel, herramientas y objetivos a corto/largo plazo.',
-                    'Diseño del plan' => 'Plan de clases a medida centrado en lo que necesitas.',
-                    'Seguimiento y soporte' => 'Ajustes sobre la marcha y resolución de dudas entre sesiones.',
-                ];
-                $i = 1;
-                foreach ($steps as $title => $desc): ?>
-                    <div class="flex items-start gap-4">
-                        <div class="h-9 w-9 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm"><?php echo esc_html($i); ?></div>
-                        <div>
-                            <h4 class="text-lg font-semibold text-slate-900"><?php echo esc_html($title); ?></h4>
-                            <p class="text-slate-600"><?php echo esc_html($desc); ?></p>
-                        </div>
-                    </div>
-                <?php
-                $i++;
-                endforeach; ?>
-            </div>
-        </div>
-
-        <div class="bg-white text-slate-900 p-8 rounded-[1.75rem] border border-slate-200 shadow-sm relative overflow-hidden flex flex-col justify-between">
-            <div class="absolute inset-0 opacity-30 pointer-events-none bg-[radial-gradient(circle_at_20%_20%,rgba(33,112,245,0.15),transparent_35%),radial-gradient(circle_at_80%_30%,rgba(56,189,248,0.12),transparent_30%),radial-gradient(circle_at_50%_80%,rgba(99,102,241,0.12),transparent_30%)]"></div>
-            <div class="relative z-10 space-y-4">
-                <div class="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-slate-200 text-slate-700 text-xs font-semibold uppercase tracking-[0.1em]">
-                    🎯 Clases adaptadas a ti
-                </div>
-                <h3 class="text-2xl font-bold text-slate-900">No doy una clase igual dos veces</h3>
-                <p class="text-lg leading-relaxed text-slate-600">
-                    Tras una primera sesión o consulta gratuita, analizo tu nivel, tus objetivos y tu forma de aprender para diseñar un plan personalizado.
-                </p>
-                <p class="text-lg leading-relaxed text-slate-600">
-                    Ya sea que estés empezando en Bitwig, bloqueado en VCV Rack o quieras preparar tu live set, trazamos juntos el camino para que aprendas lo que de verdad necesitas, a tu ritmo y con seguimiento. No hay plantillas ni clases estándar. Todo se adapta a ti y tu proceso.
-                </p>
-            </div>
-        </div>
-    </section>
-
-
+    <!-- SECCIÓN 5 · TESTIMONIOS -->
     <?php get_template_part('template-parts/block-testimonios'); ?>
 
-
-
-    <section class="max-w-5xl mx-auto px-6 pb-[2.25rem]">
+    <!-- SECCIÓN 6 · FAQ -->
+    <section class="max-w-3xl mx-auto px-6 pb-16 lg:pb-24">
         <div class="text-center mb-10">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-[0.1em] border border-primary/20">
-                Preguntas frecuentes
-            </div>
-            <h2 class="text-3xl font-extrabold text-slate-900 mt-4">Resuelve tus dudas antes de empezar</h2>
+            <h2>Preguntas frecuentes</h2>
         </div>
 
         <div class="space-y-4">
@@ -306,22 +326,43 @@ get_header();
                     'q' => '¿Qué pasa si no puedo asistir a una clase?',
                     'a' => 'Avisando con 24h reagendamos sin coste. Así mantienes el ritmo sin perder la sesión.',
                 ],
+
             ];
             foreach ($faqs as $faq): ?>
-                <details class="group bg-white border border-slate-200 rounded-2xl open:border-primary transition-all duration-300 shadow-sm">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer font-semibold text-lg text-slate-800 select-none">
+                <details class="group bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
                         <?php echo esc_html($faq['q']); ?>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="chevron w-5 h-5 text-slate-400 group-open:text-primary transition-transform duration-300 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m7-7H5"/>
                         </svg>
                     </summary>
-                    <div class="px-6 pb-6 pt-0 text-slate-600 leading-relaxed">
+                    <div class="px-6 pb-5 text-slate-600 leading-relaxed">
                         <?php echo esc_html($faq['a']); ?>
                     </div>
                 </details>
             <?php endforeach; ?>
         </div>
     </section>
+
+    <!-- SECCIÓN 7 · CTA FINAL -->
+    <section class="max-w-4xl mx-auto px-6 pb-24 lg:pb-32 text-center">
+        <h2 class="mb-6">&iquest;Listo para avanzar?</h2>
+        <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+            Elige tu punto de entrada y empieza hoy. Si tienes dudas, la consulta gratuita es el mejor primer paso.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="<?php echo esc_url(home_url('/consulta-gratuita')); ?>"
+                class="w-full sm:w-auto btn-primary justify-center px-8 py-4 text-base">
+                Reservar consulta gratuita
+            </a>
+            <a href="<?php echo esc_url(home_url('/academia')); ?>"
+                class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 bg-white border border-slate-300 rounded-lg hover:border-slate-400 hover:text-slate-900 transition-colors">
+                Ver cursos online
+            </a>
+        </div>
+    </section>
+
 </main>
 
 <?php get_footer(); ?>

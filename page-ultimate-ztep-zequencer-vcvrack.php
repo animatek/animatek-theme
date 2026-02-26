@@ -52,7 +52,13 @@ get_header();
             <div class="space-y-10">
                 <div class="space-y-4">
                     <div class="flex items-center gap-2 sm:gap-3 text-left text-slate-900 justify-start">
-                        <i data-lucide="cable" class="w-6 h-6 text-primary shrink-0"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1"/>
+                            <path d="M19 15V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V9"/>
+                            <path d="M21 21v-2h-4"/>
+                            <path d="M3 5v2a1 1 0 0 0 1 1h1a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H3a1 1 0 0 0-1 1"/>
+                            <path d="M3 3v2h4"/>
+                        </svg>
                         <p class="text-lg sm:text-xl font-semibold leading-tight mb-0 text-left">De Max for Live a VCV Rack</p>
                     </div>
                     <div class="space-y-3 text-slate-700 leading-relaxed">

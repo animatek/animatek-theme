@@ -42,7 +42,7 @@ get_header();
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto space-y-3">
                 <p class="text-xs uppercase tracking-[0.14em] font-semibold text-primary">Contenido clave</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Qué aprenderás</h2>
+                <h2>Qué aprenderás</h2>
                 <p class="text-lg text-slate-600">Domina los fundamentos de la síntesis modular sin perderte en los cables: patching limpio, módulos imprescindibles y flujo de señal claro.</p>
             </div>
 
@@ -135,7 +135,7 @@ get_header();
         <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
             <div class="space-y-5">
                 <p class="text-xs uppercase tracking-[0.14em] font-semibold text-primary">Qué hay dentro</p>
-                <h2 class="text-3xl font-bold text-slate-900">Dentro del ebook</h2>
+                <h2>Dentro del ebook</h2>
                 <p class="text-base text-slate-600 max-w-2xl">Checklist accionable, ejemplos de patching y flujos de trabajo para que pases de “no suena” a tu primer loop sólido sin perder tiempo.</p>
                 <ul class="space-y-4">
                     <li class="flex gap-3">
@@ -224,7 +224,7 @@ get_header();
         <div class="max-w-3xl mx-auto px-6 relative z-10">
             <div class="text-center space-y-4 mb-12">
                 <p class="text-xs uppercase tracking-[0.14em] font-semibold text-primary">Descarga inmediata</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Descarga el ebook gratis</h2>
+                <h2>Descarga el ebook gratis</h2>
                 <p class="text-slate-600 text-lg">Completa el formulario y recibe tu copia al instante en tu correo.</p>
             </div>
 

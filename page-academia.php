@@ -162,7 +162,7 @@ get_header();
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-[0.1em] border border-primary/20">
                 Preguntas frecuentes
             </div>
-            <h2 class="text-3xl font-bold text-slate-900 mt-4">Resuelve tus dudas antes de empezar</h2>
+            <h2 class="mt-4">Resuelve tus dudas antes de empezar</h2>
         </div>
 
         <div class="space-y-4">

@@ -12,7 +12,7 @@ if (post_password_required()) {
 
 <div id="comments" class="comments-area my-10 sm:my-20 mx-auto max-w-3xl">
     <?php if (have_comments()): ?>
-        <h2 class="comments-title text-3xl font-medium text-zinc-900 mb-8">
+        <h2 class="comments-title mb-8">
             <?php
             printf(
                 esc_html(_nx(

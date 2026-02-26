@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(git -C /mnt/SPEED/CODE/animatek-tailpress-wp/wp/wp-content/themes/animatek-tailpress log --oneline --all)",
+      "Bash(npm run build:*)",
+      "Bash(php -l:*)"
+    ]
+  }
+}

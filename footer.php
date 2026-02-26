@@ -61,13 +61,19 @@
                             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
                         </svg>
                     </a>
+
+                    <!-- Matrix -->
+                    <a href="https://matrix.to/#/#animatek-academy:matrix.org" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors duration-300" aria-label="Matrix">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.036.107 1.49.325.453.218.793.576 1.018 1.073.275-.373.63-.696 1.065-.971.434-.275.962-.412 1.582-.412.467 0 .896.058 1.285.174.389.117.72.304.989.559.27.256.477.583.626.981.148.399.222.878.222 1.435v5.949h-1.98v-5.15c0-.321-.014-.616-.04-.882a1.783 1.783 0 0 0-.195-.673.986.986 0 0 0-.439-.43c-.19-.1-.446-.149-.766-.149-.32 0-.58.064-.782.196a1.333 1.333 0 0 0-.464.503 2.087 2.087 0 0 0-.222.706 5.018 5.018 0 0 0-.055.756v5.123h-1.98v-5.107c0-.271-.004-.547-.012-.824a2.485 2.485 0 0 0-.136-.744.993.993 0 0 0-.398-.53c-.182-.133-.449-.2-.801-.2-.111 0-.257.024-.439.074a1.47 1.47 0 0 0-.503.248 1.478 1.478 0 0 0-.419.504c-.113.207-.169.479-.169.816v5.763h-1.98V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"/>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- Legal Links -->
                 <div class="flex flex-wrap justify-center gap-6 text-sm font-medium">
-                    <a href="/politica-privacidad/" class="hover:text-white transition-colors duration-300">Política de Privacidad</a>
+                    <a href="/politica-privacidad/" class="hover:text-white transition-colors duration-300">Información Legal</a>
                     <a href="/condiciones-y-contratacion/" class="hover:text-white transition-colors duration-300">Condiciones y Contratación</a>
-                    <a href="/reembolso_devoluciones/" class="hover:text-white transition-colors duration-300">Reembolso y Devoluciones</a>
                 </div>
 
                 <!-- Copyright -->

@@ -64,7 +64,9 @@ get_header();
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="rounded-[1.75rem] border border-slate-200 bg-white shadow-sm p-6 sm:p-8 space-y-4 lg:col-span-2">
                     <div class="flex items-center gap-2">
-                        <i data-lucide="zap" class="w-6 h-6 text-primary"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+                        </svg>
                         <h3 class="text-2xl font-bold text-slate-900">El cerebro de tu Live Set</h3>
                     </div>
                     <p class="text-base sm:text-lg text-slate-700 leading-relaxed">

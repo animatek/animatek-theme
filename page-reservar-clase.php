@@ -35,7 +35,7 @@ get_header();
                 <span class="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">🎯</span>
                 <div>
                     <p class="text-xs font-semibold uppercase tracking-[0.12em] text-primary">¿Qué tienes que hacer ahora?</p>
-                    <h2 class="text-2xl font-extrabold text-slate-900">Sigue estos pasos rápidos</h2>
+                    <h2>Sigue estos pasos rápidos</h2>
                 </div>
             </div>
 

@@ -112,7 +112,7 @@ get_header();
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto space-y-3">
                 <p class="text-xs uppercase tracking-[0.14em] font-semibold text-primary">Qué incluye el pack</p>
-                <h2 class="text-3xl md:text-4xl font-bold">Patches listos para crear sin fricción</h2>
+                <h2>Patches listos para crear sin fricción</h2>
                 <p class="text-lg text-slate-600">Abre el proyecto, suena y graba: los módulos clave ya están ruteados con buses, envíos y escenas preparadas.</p>
             </div>
 
@@ -168,7 +168,7 @@ get_header();
         <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
             <div class="space-y-5">
                 <p class="text-xs uppercase tracking-[0.14em] font-semibold text-primary">Listo para crear</p>
-                <h2 class="text-3xl font-bold">Abre, prueba un loop y grábalo al instante</h2>
+                <h2>Abre, prueba un loop y grábalo al instante</h2>
                 <p class="text-base text-slate-600 max-w-2xl">Arranca desde plantillas que ya incluyen buses de mezcla, FX de envío y rutas de grabación. Solo conecta tu MIDI, elige tempo y empieza a modular.</p>
                 <ul class="space-y-4">
                     <li class="flex gap-3">
@@ -236,7 +236,7 @@ get_header();
         <div class="max-w-3xl mx-auto px-6 relative z-10">
             <div class="text-center space-y-4 mb-12">
                 <p class="text-xs uppercase tracking-[0.14em] font-semibold text-primary">Descarga inmediata</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Descarga los patches</h2>
+                <h2>Descarga los patches</h2>
                 <p class="text-slate-600 text-lg">Completa el formulario de Brevo y recibe el pack en tu correo al instante.</p>
             </div>
 

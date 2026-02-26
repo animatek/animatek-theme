@@ -27,20 +27,11 @@ get_header();
             get_query_var('page') ? get_query_var('page') : 0
         );
 
-        $libreria_cat = get_category_by_slug('libreria-sonora');
-        $exclude_cat  = $libreria_cat ? [$libreria_cat->term_id] : [];
-
-        $query_args = [
+        $blog_query = new WP_Query([
             'post_type'      => 'post',
             'posts_per_page' => 3,
             'paged'          => $paged,
-        ];
-
-        if ( ! empty( $exclude_cat ) ) {
-            $query_args['category__not_in'] = $exclude_cat;
-        }
-
-        $blog_query = new WP_Query( $query_args );
+        ]);
 
         if ($blog_query->have_posts()) : ?>
             <div class="grid gap-6 md:gap-7 lg:gap-8 md:grid-cols-3 mt-4">
@@ -101,7 +92,7 @@ get_header();
                                 </time>
                             </div>
 
-                            <h2 class="mt-2 text-xl font-extrabold text-slate-900">
+                            <h2 class="mt-2">
                                 <a href="<?php the_permalink(); ?>" class="line-clamp-2 !no-underline text-slate-900">
                                     <?php the_title(); ?>
                                 </a>
