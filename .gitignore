@@ -6,3 +6,9 @@
 /.nova
 /.vscode
 /.zed
+
+# Superpowers
+.superpowers/
+docs/superpowers/
+.claude/
+.github/
