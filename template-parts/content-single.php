@@ -99,35 +99,31 @@ $cat_palette = [
         </div>
     </div>
 
-    <div class="mt-8">
-        <div class="bg-white rounded-3xl shadow-lg border border-slate-200/80 p-6 md:p-8">
-            <div class="post-content text-[15px] md:text-base text-slate-800 leading-relaxed space-y-6">
-                <?php
-                the_content();
+    <div class="max-w-[720px] mx-auto mt-8">
+        <div class="post-content text-[15px] md:text-base text-slate-800 leading-relaxed space-y-6">
+            <?php
+            the_content();
 
-                wp_link_pages([
-                    'before' => '<div class="mt-6 text-sm text-slate-500">Páginas: ',
-                    'after'  => '</div>',
-                ]);
-                ?>
-            </div>
-            <?php get_template_part('template-parts/block-explora'); ?>
+            wp_link_pages([
+                'before' => '<div class="mt-6 text-sm text-slate-500">Páginas: ',
+                'after'  => '</div>',
+            ]);
+            ?>
         </div>
-
-        
+        <?php get_template_part('template-parts/block-explora'); ?>
     </div>
 
-    <nav class="mt-10 pb-6">
-        <div class="grid gap-4 md:grid-cols-2">
-            <div class="bg-white border border-slate-200 rounded-2xl shadow-sm p-4 hover:-translate-y-0.5 transition">
+    <nav class="mt-8 pb-8 max-w-[720px] mx-auto">
+        <div class="grid gap-3 md:grid-cols-2">
+            <div class="bg-white border border-slate-200 rounded-2xl p-4 hover:-translate-y-0.5 transition">
                 <?php previous_post_link(
-                    '<span class="block text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500 mb-1">Anterior</span><span class="block text-slate-800 hover:text-primary">%link</span>',
+                    '<span class="block text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-1">← Anterior</span><span class="block text-sm font-semibold text-slate-700 hover:text-primary transition">%link</span>',
                     '%title'
                 ); ?>
             </div>
-            <div class="bg-white border border-slate-200 rounded-2xl shadow-sm p-4 hover:-translate-y-0.5 transition text-left md:text-right">
+            <div class="bg-white border border-slate-200 rounded-2xl p-4 hover:-translate-y-0.5 transition text-left md:text-right">
                 <?php next_post_link(
-                    '<span class="block text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500 mb-1">Siguiente</span><span class="block text-slate-800 hover:text-primary">%link</span>',
+                    '<span class="block text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-1">Siguiente →</span><span class="block text-sm font-semibold text-slate-700 hover:text-primary transition">%link</span>',
                     '%title'
                 ); ?>
             </div>
