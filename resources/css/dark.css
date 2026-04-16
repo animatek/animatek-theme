@@ -27,6 +27,77 @@
 [data-theme="dark"] .bg-slate-200 { background-color: #1e1e2e !important; }
 [data-theme="dark"] .bg-zinc-50 { background-color: #1e1e2e !important; }
 [data-theme="dark"] .bg-zinc-100 { background-color: #252538 !important; }
+[data-theme="dark"] .bg-slate-50\/80 { background-color: #252538cc !important; }
+[data-theme="dark"] .bg-slate-50\/50 { background-color: #25253880 !important; }
+[data-theme="dark"] .bg-slate-100\/50 { background-color: #25253880 !important; }
+[data-theme="dark"] .bg-white\/80 { background-color: #2a2a3ecc !important; }
+[data-theme="dark"] .bg-white\/50 { background-color: #2a2a3e80 !important; }
+
+/* Card CTA testimonios "El siguiente eres tú" */
+.testimonios-cta-card {
+    background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);
+}
+[data-theme="dark"] .testimonios-cta-card {
+    background: linear-gradient(135deg, #1e1e35 0%, #22183a 100%) !important;
+}
+[data-theme="dark"] .testimonios-cta-card p {
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] .testimonios-cta-card p[style*="color"] {
+    color: #c4b5fd !important;
+}
+[data-theme="dark"] .testimonios-cta-card .text-slate-500 {
+    color: #94a3b8 !important;
+}
+[data-theme="dark"] .testimonios-cta-card div[style*="background"] {
+    background: linear-gradient(135deg, #2e2060, #3b1f5a) !important;
+    color: #c4b5fd !important;
+}
+
+/* Chips de colores (bg-indigo-50, bg-cyan-50, bg-purple-50, etc.) */
+[data-theme="dark"] .bg-indigo-50 { background-color: #1e1e38 !important; }
+[data-theme="dark"] .bg-cyan-50 { background-color: #0f2130 !important; }
+[data-theme="dark"] .bg-purple-50 { background-color: #221830 !important; }
+[data-theme="dark"] .bg-emerald-50 { background-color: #0f2520 !important; }
+[data-theme="dark"] .bg-amber-50 { background-color: #251e0f !important; }
+[data-theme="dark"] .bg-rose-50 { background-color: #2a1520 !important; }
+[data-theme="dark"] .bg-blue-50 { background-color: #0f1e30 !important; }
+[data-theme="dark"] .bg-green-50 { background-color: #0f2518 !important; }
+[data-theme="dark"] .bg-yellow-50 { background-color: #25200f !important; }
+[data-theme="dark"] .bg-pink-50 { background-color: #2a1525 !important; }
+[data-theme="dark"] .text-indigo-600 { color: #818cf8 !important; }
+[data-theme="dark"] .text-cyan-600 { color: #22d3ee !important; }
+[data-theme="dark"] .text-purple-600 { color: #c084fc !important; }
+[data-theme="dark"] .text-emerald-600 { color: #34d399 !important; }
+[data-theme="dark"] .text-amber-600 { color: #fbbf24 !important; }
+[data-theme="dark"] .text-rose-600 { color: #fb7185 !important; }
+[data-theme="dark"] .text-blue-600 { color: #60a5fa !important; }
+[data-theme="dark"] .text-green-600 { color: #4ade80 !important; }
+[data-theme="dark"] .border-indigo-100 { border-color: #312e6e !important; }
+[data-theme="dark"] .border-cyan-100 { border-color: #0f3040 !important; }
+[data-theme="dark"] .border-purple-100 { border-color: #3b1f5a !important; }
+[data-theme="dark"] .border-emerald-100 { border-color: #0f3828 !important; }
+[data-theme="dark"] .border-amber-100 { border-color: #3d2e0f !important; }
+
+/* Gradientes claros → gradientes oscuros (override directo de background-image) */
+[data-theme="dark"] .bg-gradient-to-br.from-slate-50,
+[data-theme="dark"] .bg-gradient-to-br.from-slate-100 {
+    background-image: linear-gradient(to bottom right, #1e1e2e, #252538) !important;
+}
+[data-theme="dark"] .bg-gradient-to-b.from-slate-50,
+[data-theme="dark"] .bg-gradient-to-b.from-slate-100 {
+    background-image: linear-gradient(to bottom, #1e1e2e, #252538) !important;
+}
+[data-theme="dark"] .bg-gradient-to-r.from-slate-50,
+[data-theme="dark"] .bg-gradient-to-r.from-slate-100 {
+    background-image: linear-gradient(to right, #1e1e2e, #252538) !important;
+}
+/* Fallback para cualquier gradiente con from-slate-* */
+[data-theme="dark"] [class*="bg-gradient"].from-slate-50,
+[data-theme="dark"] [class*="bg-gradient"].from-slate-100,
+[data-theme="dark"] [class*="bg-gradient"].from-white {
+    background-image: linear-gradient(to bottom right, #1e1e2e, #252538) !important;
+}
 
 /* Textos claros → texto oscuro */
 [data-theme="dark"] .text-slate-900,
@@ -72,6 +143,29 @@
 [data-theme="dark"] .btn-secondary:hover {
     border-color: #2C7FFF !important;
     color: #2C7FFF !important;
+}
+
+/* === FAQ ACORDEÓN === */
+[data-theme="dark"] details.group {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+}
+[data-theme="dark"] details.group summary {
+    color: #e2e8f0 !important;
+    background-color: #2a2a3e !important;
+}
+[data-theme="dark"] details.group summary span {
+    color: #94a3b8 !important;
+}
+[data-theme="dark"] details.group > div {
+    background-color: #252538 !important;
+    border-color: #3a3a52 !important;
+    color: #cbd5e1 !important;
+}
+[data-theme="dark"] details.group > div p,
+[data-theme="dark"] details.group > div li,
+[data-theme="dark"] details.group > div span {
+    color: #cbd5e1 !important;
 }
 
 /* === HEADER / NAV === */
@@ -152,8 +246,17 @@
 
 /* Textos secundarios */
 [data-theme="dark"] .tutor-color-muted,
-[data-theme="dark"] .tutor-fs-7 {
+[data-theme="dark"] .tutor-fs-7,
+[data-theme="dark"] .tutor-color-secondary {
     color: #94a3b8 !important;
+}
+
+/* Textos que usan --tutor-body-color (gris oscuro → blanco en dark mode) */
+[data-theme="dark"] {
+    --tutor-body-color: #e2e8f0;
+}
+[data-theme="dark"] .tutor-color-black {
+    color: #e2e8f0 !important;
 }
 
 /* Tablas y listas */
@@ -190,6 +293,170 @@
     border-color: #3a3a52 !important;
 }
 [data-theme="dark"] .tutor-course-topic-title {
+    color: #e2e8f0 !important;
+}
+
+/* Tabs de curso (Información / Anuncios) */
+[data-theme="dark"] .tutor-course-spotlight-tab,
+[data-theme="dark"] .tutor-course-spotlight-wrapper {
+    background-color: #1e1e2e !important;
+    border-color: #3a3a52 !important;
+}
+[data-theme="dark"] .tutor-course-spotlight-tab .tutor-nav-link,
+[data-theme="dark"] .tutor-course-spotlight-tab li a {
+    color: #94a3b8 !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+[data-theme="dark"] .tutor-course-spotlight-tab .tutor-is-active .tutor-nav-link,
+[data-theme="dark"] .tutor-course-spotlight-tab .tutor-is-active a,
+[data-theme="dark"] .tutor-course-spotlight-tab li.active a {
+    color: #2C7FFF !important;
+    border-color: #2C7FFF !important;
+    background-color: transparent !important;
+}
+
+/* Contenido del curso (acordeón de lecciones) */
+[data-theme="dark"] .tutor-course-single-content-wrapper,
+[data-theme="dark"] .tutor-course-topics-contents,
+[data-theme="dark"] .tutor-entry-content {
+    background-color: #1e1e2e !important;
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] .tutor-accordion-item-header {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] .tutor-accordion-item-body,
+[data-theme="dark"] .tutor-accordion-item .tutor-accordion-item-body,
+[data-theme="dark"] .tutor-single-course-sidebar-more .tutor-accordion-item-body,
+[data-theme="dark"] .tutor-course-single-sidebar-wrapper .tutor-accordion-item-body {
+    background-color: #252538 !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] .tutor-course-single-sidebar-wrapper .tutor-accordion-item-body * {
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] .tutor-course-single-sidebar-wrapper .tutor-course-topic-item.is-active a {
+    background-color: #2C7FFF22 !important;
+    color: #60a5fa !important;
+}
+[data-theme="dark"] .tutor-course-topic-item {
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] .tutor-course-topic-item:hover {
+    background-color: #2a2a3e !important;
+}
+[data-theme="dark"] .tutor-course-topic-item-title {
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] .tutor-course-topics-header {
+    background-color: #16162a !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Fondo blanco Tutor genérico */
+[data-theme="dark"] .tutor-bg-white {
+    background-color: #2a2a3e !important;
+}
+
+/* Título del sidebar */
+[data-theme="dark"] .tutor-course-single-sidebar-title {
+    background-color: #16162a !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Sidebar del curso (Progreso, Un curso de, etc.) */
+[data-theme="dark"] .tutor-single-course-sidebar,
+[data-theme="dark"] .tutor-single-course-sidebar-more,
+[data-theme="dark"] .tutor-course-single-sidebar-wrapper,
+[data-theme="dark"] .tutor-course-single-info-card,
+[data-theme="dark"] .tutor-icard-content {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Nav bar de Tutor (tabs Información / Anuncios) */
+[data-theme="dark"] .tutor-nav:not(.tutor-nav-pills):not(.tutor-nav-tabs) {
+    background-color: #1e1e2e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] .tutor-nav:not(.tutor-nav-pills):not(.tutor-nav-tabs) a,
+[data-theme="dark"] .tutor-nav:not(.tutor-nav-pills):not(.tutor-nav-tabs) li,
+[data-theme="dark"] .tutor-nav:not(.tutor-nav-pills):not(.tutor-nav-tabs) span {
+    color: #94a3b8 !important;
+}
+[data-theme="dark"] .tutor-nav:not(.tutor-nav-pills):not(.tutor-nav-tabs) .is-active a,
+[data-theme="dark"] .tutor-nav:not(.tutor-nav-pills):not(.tutor-nav-tabs) .tutor-is-active a {
+    color: #2C7FFF !important;
+}
+
+/* Items de lecciones en el sidebar */
+[data-theme="dark"] .tutor-course-content-list-item {
+    background-color: #252538 !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] .tutor-course-content-list-item:hover {
+    background-color: #2a2a3e !important;
+}
+
+/* Último div del sidebar-more (wrapper de acordeón instructor) */
+[data-theme="dark"] .tutor-single-course-sidebar-more > div:last-child {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Acordeón del sidebar (Un curso de, instructor, etc.) */
+[data-theme="dark"] .tutor-accordion-item,
+[data-theme="dark"] .tutor-single-course-sidebar-more .tutor-accordion-item {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Cards genéricas de Tutor */
+[data-theme="dark"] .tutor-card-body,
+[data-theme="dark"] .tutor-card {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Textos dentro de las cards del sidebar */
+[data-theme="dark"] .tutor-single-course-sidebar p,
+[data-theme="dark"] .tutor-single-course-sidebar span,
+[data-theme="dark"] .tutor-single-course-sidebar-more p,
+[data-theme="dark"] .tutor-single-course-sidebar-more span {
+    color: #e2e8f0 !important;
+}
+
+/* Barra de progreso del curso */
+[data-theme="dark"] .tutor-progress-bar {
+    background-color: #3a3a52 !important;
+}
+[data-theme="dark"] .tutor-progress-filled {
+    background-color: #2C7FFF !important;
+}
+
+/* Author / instructor card */
+[data-theme="dark"] .tutor-course-author,
+[data-theme="dark"] .tutor-instructor-card {
+    background-color: #2a2a3e !important;
+    color: #e2e8f0 !important;
+}
+
+/* Wrapper general del single course */
+[data-theme="dark"] .tutor-single-course-wrapper {
+    background-color: #1e1e2e !important;
     color: #e2e8f0 !important;
 }
 

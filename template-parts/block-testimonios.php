@@ -99,8 +99,7 @@
 
             <!-- Tarjeta CTA: El siguiente eres tú -->
             <a href="https://animatek.net/consulta-gratuita/"
-               class="group relative rounded-2xl p-5 border-2 border-dashed border-primary/30 hover:border-primary/70 hover:shadow-lg transition-all flex flex-col h-full items-center justify-center text-center cursor-pointer no-underline overflow-hidden"
-               style="background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);">
+               class="testimonios-cta-card group relative rounded-2xl p-5 border-2 border-dashed border-primary/30 hover:border-primary/70 hover:shadow-lg transition-all flex flex-col h-full items-center justify-center text-center cursor-pointer no-underline overflow-hidden">
                 <!-- Fondo decorativo animado -->
                 <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                      style="background: linear-gradient(135deg, rgba(99,102,241,0.06) 0%, rgba(168,85,247,0.06) 100%);"></div>
