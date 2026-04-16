@@ -1,6 +1,12 @@
 /* ============================================================
    ANIMATEK DARK MODE
    Interruptor: <html data-theme="dark">
+
+   Este archivo se importa sin @layer (unlayered) de forma
+   intencional. Los estilos unlayered tienen mayor prioridad
+   que cualquier @layer de Tailwind, lo que garantiza que
+   los overrides de dark mode (marcados con !important) ganen
+   siempre la cascada sin conflictos.
    ============================================================ */
 
 /* === BASE === */
