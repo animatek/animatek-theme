@@ -59,6 +59,15 @@
             transform: translateX(4px);
         }
     </style>
+    <script>
+    (function() {
+        var t = localStorage.getItem('animatek-theme');
+        var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (t === 'dark' || (!t && d)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    })();
+    </script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('bg-slate-200 text-zinc-900 antialiased'); ?>>
