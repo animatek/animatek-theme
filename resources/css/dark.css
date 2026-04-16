@@ -11,7 +11,101 @@
 
 /* === BASE === */
 
+[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+[data-theme="dark"] body {
+    background-color: #1e1e2e !important;
+    color: #e2e8f0 !important;
+}
+
+/* Fondos blancos y claros → superficie oscura */
+[data-theme="dark"] .bg-white { background-color: #2a2a3e !important; }
+[data-theme="dark"] .bg-slate-50 { background-color: #1e1e2e !important; }
+[data-theme="dark"] .bg-slate-100 { background-color: #252538 !important; }
+[data-theme="dark"] .bg-slate-200 { background-color: #1e1e2e !important; }
+[data-theme="dark"] .bg-zinc-50 { background-color: #1e1e2e !important; }
+[data-theme="dark"] .bg-zinc-100 { background-color: #252538 !important; }
+
+/* Textos claros → texto oscuro */
+[data-theme="dark"] .text-slate-900,
+[data-theme="dark"] .text-zinc-900 { color: #e2e8f0 !important; }
+[data-theme="dark"] .text-slate-800,
+[data-theme="dark"] .text-zinc-800 { color: #cbd5e1 !important; }
+[data-theme="dark"] .text-slate-700,
+[data-theme="dark"] .text-zinc-700 { color: #94a3b8 !important; }
+[data-theme="dark"] .text-slate-600,
+[data-theme="dark"] .text-zinc-600 { color: #94a3b8 !important; }
+[data-theme="dark"] .text-slate-500 { color: #64748b !important; }
+[data-theme="dark"] .text-black { color: #e2e8f0 !important; }
+
+/* Bordes */
+[data-theme="dark"] .border-slate-200,
+[data-theme="dark"] .border-zinc-200 { border-color: #3a3a52 !important; }
+[data-theme="dark"] .border-slate-100,
+[data-theme="dark"] .border-zinc-100 { border-color: #2a2a3e !important; }
+
+/* Headings */
+[data-theme="dark"] h1,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 { color: #e2e8f0 !important; }
+[data-theme="dark"] h2 { color: #60a5fa !important; }
+
+/* Inputs nativos */
+[data-theme="dark"] input:not([type="submit"]):not([type="button"]):not([type="reset"]),
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+
+/* btn-secondary (definido inline en header.php) */
+[data-theme="dark"] .btn-secondary {
+    background-color: #2a2a3e !important;
+    color: #e2e8f0 !important;
+    border-color: #3a3a52 !important;
+}
+[data-theme="dark"] .btn-secondary:hover {
+    border-color: #2C7FFF !important;
+    color: #2C7FFF !important;
+}
+
 /* === HEADER / NAV === */
+
+[data-theme="dark"] header {
+    background-color: rgba(22, 22, 42, 0.95) !important;
+    border-color: #3a3a52 !important;
+}
+
+/* Logo text */
+[data-theme="dark"] header .text-slate-900 {
+    color: #e2e8f0 !important;
+}
+
+/* Nav mobile dropdown */
+[data-theme="dark"] #primary-navigation {
+    background-color: #16162a !important;
+    border-color: #3a3a52 !important;
+}
+
+/* Nav links */
+[data-theme="dark"] #primary-navigation a {
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] #primary-navigation a:hover {
+    color: #2C7FFF !important;
+}
+
+/* Hamburger button */
+[data-theme="dark"] #primary-menu-toggle {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
 
 /* === TOGGLE BUTTON === */
 
