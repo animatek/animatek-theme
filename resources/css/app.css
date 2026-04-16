@@ -7,6 +7,7 @@
 @import './theme.css';
 @import './utilities.css';
 @import './custom.css' layer(utilities);
+@import './dark.css';
 
 @source '../../*.php';
 @source '../../template-parts/**/*.php';

@@ -6,6 +6,7 @@ const safelist = fs.existsSync('./safelist.txt')
     : [];
 
 module.exports = {
+    darkMode: ['selector', '[data-theme="dark"]'],
     content: [
         './*.php',
         './template-parts/**/*.php',
