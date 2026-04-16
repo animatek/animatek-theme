@@ -61,7 +61,8 @@
     </style>
     <script>
     (function() {
-        var t = localStorage.getItem('animatek-theme');
+        var t = null;
+        try { t = localStorage.getItem('animatek-theme'); } catch(e) {}
         var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (t === 'dark' || (!t && d)) {
             document.documentElement.setAttribute('data-theme', 'dark');
