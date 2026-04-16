@@ -302,10 +302,47 @@ get_header();
         </div>
     </section>
 
-    <!-- SECCIÓN 5 · TESTIMONIOS -->
+    <!-- SECCIÓN 5 · TESTIMONIO DESTACADO -->
+    <section class="max-w-6xl mx-auto px-6 mb-16">
+        <div class="bg-slate-900 rounded-[2rem] overflow-hidden shadow-xl relative">
+            <div class="relative z-10 flex flex-col lg:flex-row items-stretch">
+                <!-- Image Column -->
+                <div class="lg:w-1/3 relative min-h-[300px]">
+                    <img src="https://animatek.net/wp-content/uploads/2026/03/Valver.webp" 
+                         alt="Valver - VCV Rack & Instalaciones" 
+                         class="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-slate-900"></div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="lg:w-2/3 p-6 md:p-10 lg:p-12 flex flex-col justify-center">
+                    <div class="mb-4">
+                        <span class="bg-primary/20 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-[0.2em] border border-primary/30">Destacado: VCV Rack</span>
+                    </div>
+
+                    <blockquote class="relative">
+                        <div class="text-white text-base md:text-lg font-light leading-relaxed space-y-4 mb-6 italic">
+                            <p>
+                                "He contratado un bono de 5 horas de clases con Javier Melgar para centrarme en <strong>VCV Rack y sistemas sonoros generativos</strong>. Lo que más destaco es cómo explica: parte de una idea muy simple —que al final todo es voltaje— y desde ahí va construyendo todo con una <strong>lógica aplastante</strong>."
+                            </p>
+                        </div>
+                        
+                        <footer class="flex items-center gap-4 border-t border-white/5 pt-4">
+                            <div>
+                                <h4 class="text-white font-bold text-base">Valver</h4>
+                                <p class="text-primary text-xs font-medium">Artista Visual e Instalaciones</p>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6 · TESTIMONIOS -->
     <?php get_template_part('template-parts/block-testimonios'); ?>
 
-    <!-- SECCIÓN 6 · FAQ -->
+    <!-- SECCIÓN 7 · FAQ -->
     <section class="max-w-3xl mx-auto px-6 pb-16 lg:pb-24">
         <div class="text-center mb-10">
             <h2>Preguntas frecuentes</h2>

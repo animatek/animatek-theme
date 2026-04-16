@@ -1,0 +1,129 @@
+<h2>Rediseño del post de blog</h2>
+<p class="subtitle">¿Cuál de estos layouts te parece más moderno? Haz clic para seleccionar.</p>
+
+<style>
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 16px; }
+  .card { background: #fff; border: 2px solid #e2e8f0; border-radius: 16px; overflow: hidden; cursor: pointer; transition: all 0.2s; }
+  .card.selected { border-color: #2170F5; box-shadow: 0 0 0 3px rgba(33,112,245,0.15); }
+  .card-image { width: 100%; background: #0f172a; position: relative; overflow: hidden; }
+  .card-body { padding: 14px 16px; }
+  .card-body h3 { margin: 0 0 4px; font-size: 14px; font-weight: 700; color: #1e293b; }
+  .card-body p { margin: 0; font-size: 12px; color: #64748b; line-height: 1.4; }
+  .tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 20px; }
+  .tag-blue { background: rgba(33,112,245,0.12); color: #2170F5; }
+  .mock-img { width: 100%; height: 100%; object-fit: cover; display: block; background: linear-gradient(135deg, #1e3a5f 0%, #2170F5 50%, #24B979 100%); min-height: 130px; }
+  .mock-img-overlay { position: absolute; inset: 0; }
+
+  /* LAYOUT A - Hero con título encima */
+  .hero-a { height: 160px; }
+  .hero-a-overlay { background: linear-gradient(to top, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.1) 100%); position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 12px; }
+  .hero-a-title { color: #fff; font-size: 11px; font-weight: 800; line-height: 1.3; margin: 0 0 4px; }
+  .hero-a-meta { display: flex; gap: 8px; align-items: center; }
+  .hero-a-meta span { color: rgba(255,255,255,0.75); font-size: 9px; }
+  .hero-a-content { padding: 10px 12px; }
+  .hero-a-content .lines div { height: 6px; background: #e2e8f0; border-radius: 3px; margin-bottom: 5px; }
+
+  /* LAYOUT B - Editorial con sidebar */
+  .editorial-b { display: flex; min-height: 160px; }
+  .editorial-b-img { width: 55%; background: linear-gradient(135deg, #1e3a5f 0%, #2170F5 50%, #24B979 100%); flex-shrink: 0; }
+  .editorial-b-side { padding: 10px 12px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  .editorial-b-title { font-size: 10px; font-weight: 800; color: #1e293b; line-height: 1.4; }
+  .editorial-b-meta { font-size: 9px; color: #64748b; }
+  .editorial-b-content { margin-top: 10px; padding: 8px 12px; border-top: 1px solid #f1f5f9; }
+  .editorial-b-content .lines div { height: 5px; background: #e2e8f0; border-radius: 3px; margin-bottom: 4px; }
+
+  /* LAYOUT C - Magazine, título arriba */
+  .mag-header { padding: 10px 12px 8px; }
+  .mag-title { font-size: 11px; font-weight: 800; color: #1e293b; line-height: 1.3; margin: 0 0 4px; }
+  .mag-meta { display: flex; gap: 6px; align-items: center; }
+  .mag-meta span { font-size: 9px; color: #64748b; }
+  .mag-img { height: 110px; background: linear-gradient(135deg, #1e3a5f 0%, #2170F5 50%, #24B979 100%); position: relative; }
+  .mag-progress { height: 3px; background: linear-gradient(to right, #2170F5 35%, #e2e8f0 35%); }
+  .mag-content { padding: 8px 12px; }
+  .mag-content .lines div { height: 5px; background: #e2e8f0; border-radius: 3px; margin-bottom: 4px; }
+
+  @media (max-width: 700px) {
+    .cards { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="cards">
+
+  <!-- OPCIÓN A: Hero cinematic -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="card-image">
+      <div class="mock-img hero-a"></div>
+      <div class="mock-img-overlay hero-a-overlay">
+        <div class="hero-a-title">Producción Musical con VCV Rack: Guía Completa</div>
+        <div class="hero-a-meta">
+          <span>📅 12 Abr 2025</span>
+          <span>· 5 min</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Hero Cinematic</h3>
+      <p>Imagen a pantalla completa con el título flotando encima en degradado oscuro. Moderno e impactante.</p>
+    </div>
+  </div>
+
+  <!-- OPCIÓN B: Editorial split -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="card-image" style="height:auto;">
+      <div class="editorial-b">
+        <div class="editorial-b-img"></div>
+        <div class="editorial-b-side">
+          <div>
+            <div style="margin-bottom:6px;"><span class="tag tag-blue">VCV RACK</span></div>
+            <div class="editorial-b-title">Producción Musical con VCV Rack</div>
+            <div class="editorial-b-meta" style="margin-top:4px;">12 Abr · 5 min lectura</div>
+          </div>
+          <div style="font-size:9px;color:#94a3b8;margin-top:6px;">Javier Melgar</div>
+        </div>
+      </div>
+      <div class="editorial-b-content">
+        <div class="lines">
+          <div style="width:90%"></div>
+          <div style="width:75%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Editorial Split</h3>
+      <p>Imagen en la mitad izquierda con metadatos a la derecha. Limpio y elegante, como una revista.</p>
+    </div>
+  </div>
+
+  <!-- OPCIÓN C: Magazine -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="card-image" style="height:auto; background:none;">
+      <div class="mag-header">
+        <div class="mag-meta" style="margin-bottom:5px;">
+          <span class="tag tag-blue">VCV RACK</span>
+          <span>· 5 min</span>
+        </div>
+        <div class="mag-title">Producción Musical con VCV Rack: Guía Completa</div>
+        <div class="mag-meta" style="margin-top:3px;">
+          <span>📅 12 Abr 2025</span>
+          <span>· Javier Melgar</span>
+        </div>
+      </div>
+      <div class="mag-img"></div>
+      <div class="mag-progress"></div>
+      <div class="mag-content">
+        <div class="lines">
+          <div style="width:95%"></div>
+          <div style="width:80%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Magazine / Artículo</h3>
+      <p>Título y meta arriba, imagen ancha debajo con barra de progreso de lectura. Estilo blog moderno.</p>
+    </div>
+  </div>
+
+</div>

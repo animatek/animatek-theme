@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/animatek/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/brainstorming/**)",
+      "Bash(/home/animatek/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/scripts/start-server.sh --project-dir /mnt/SPEED/CODE/animatek-tailpress-wp/wp/wp-content/themes/animatek-tailpress)",
+      "Read(//home/animatek/.claude/plugins/**)"
+    ]
+  }
+}
