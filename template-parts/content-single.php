@@ -37,7 +37,7 @@ $cat_palette = [
             </div>
 
             <!-- Columna derecha: metadatos -->
-            <div class="p-6 md:p-7 lg:p-8 space-y-4 flex flex-col justify-between">
+            <div class="flex flex-col justify-between p-7 md:p-8 gap-5">
                 <?php if (!empty($categories)) : ?>
                     <div>
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-full border <?php echo esc_attr($cat_palette[0]); ?>">
