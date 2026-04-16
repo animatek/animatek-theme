@@ -241,3 +241,32 @@
 }
 
 /* === SIMPLY SCHEDULE APPOINTMENTS === */
+
+/* NOTA: SSA renderiza el widget en un iframe. Solo podemos estilizar
+   el contenedor exterior. Los estilos internos del iframe no son
+   accesibles desde el tema (restricción del navegador). */
+
+/* Contenedor exterior del bloque SSA */
+[data-theme="dark"] .wp-block-ssa-booking,
+[data-theme="dark"] .ssa-block-container,
+[data-theme="dark"] .ssa-booking-app {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Tabs de navegación del booking flow (fuera del iframe) */
+[data-theme="dark"] .ssa-bookingflow-tab-panel button {
+    background-color: #2a2a3e !important;
+    color: #e2e8f0 !important;
+    border-color: #3a3a52 !important;
+}
+[data-theme="dark"] .ssa-bookingflow-tab-panel button[aria-selected="true"] {
+    color: #2C7FFF !important;
+}
+
+/* Checkboxes y toggles fuera del iframe */
+[data-theme="dark"] .ssa-toggle-input-container,
+[data-theme="dark"] .ssa-checkboxes-input-container {
+    color: #e2e8f0 !important;
+}
