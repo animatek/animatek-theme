@@ -195,4 +195,49 @@
 
 /* === FLUENT FORM === */
 
+/* Contenedor del formulario */
+[data-theme="dark"] .fluentform,
+[data-theme="dark"] .ff-default {
+    background-color: #1e1e2e !important;
+    color: #e2e8f0 !important;
+}
+
+/* Inputs, textarea, select */
+[data-theme="dark"] .ff-el-form-control {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] .ff-el-form-control:focus {
+    border-color: #2C7FFF !important;
+    outline-color: #2C7FFF !important;
+}
+
+/* Labels */
+[data-theme="dark"] .ff-el-input--label label,
+[data-theme="dark"] .ff-el-form-check-label {
+    color: #e2e8f0 !important;
+}
+
+/* Checkboxes / radio helper text */
+[data-theme="dark"] .ff-el-input--content .ff-el-form-check {
+    color: #e2e8f0 !important;
+}
+
+/* Step indicators */
+[data-theme="dark"] .ff-step-container .step-header {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+}
+
+/* Mensajes de error */
+[data-theme="dark"] .error {
+    color: #f87171 !important;
+}
+
+/* Placeholder */
+[data-theme="dark"] .ff-el-form-control::placeholder {
+    color: #64748b !important;
+}
+
 /* === SIMPLY SCHEDULE APPOINTMENTS === */
