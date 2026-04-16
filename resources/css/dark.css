@@ -15,6 +15,17 @@
 
 /* === TOGGLE BUTTON === */
 
+[data-theme="dark"] #dark-mode-toggle {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] #dark-mode-toggle:hover {
+    border-color: #2C7FFF !important;
+    color: #2C7FFF !important;
+}
+
 /* === TUTOR LMS === */
 
 /* === FLUENT FORM === */
