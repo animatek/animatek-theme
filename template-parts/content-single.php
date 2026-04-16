@@ -37,7 +37,7 @@ $cat_palette = [
             </div>
 
             <!-- Columna derecha: metadatos -->
-            <div class="p-6 md:p-7 lg:p-8 space-y-4 flex flex-col justify-center">
+            <div class="p-6 md:p-7 lg:p-8 space-y-4 flex flex-col justify-between">
                 <?php if (!empty($categories)) : ?>
                     <div>
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-full border <?php echo esc_attr($cat_palette[0]); ?>">
@@ -50,21 +50,21 @@ $cat_palette = [
                     <?php the_title(); ?>
                 </h1>
 
-                <div class="flex flex-wrap items-center gap-3 text-sm text-slate-700">
-                    <div class="inline-flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs text-slate-600 border border-slate-200 rounded-full bg-slate-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="9"/>
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/>
                         </svg>
-                        <span><?php echo esc_html(get_the_date('d M Y')); ?></span>
-                    </div>
-                    <div class="inline-flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <?php echo esc_html(get_the_date('d M Y')); ?>
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs text-slate-600 border border-slate-200 rounded-full bg-slate-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l3.5 2"/>
                             <circle cx="12" cy="12" r="9"/>
                         </svg>
-                        <span><?php echo esc_html($reading_time); ?> min de lectura</span>
-                    </div>
+                        <?php echo esc_html($reading_time); ?> min de lectura
+                    </span>
                     <?php
                     $tags = get_the_tags();
                     if ($tags) :
@@ -88,12 +88,10 @@ $cat_palette = [
                     <?php endif; ?>
                 </div>
 
-                <div class="border-t border-slate-100"></div>
-
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3 pt-5 border-t border-slate-100">
                     <div class="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-emerald-400 flex-shrink-0"></div>
                     <div>
-                        <p class="text-sm font-semibold text-slate-900 leading-tight"><?php the_author(); ?></p>
+                        <p class="text-sm font-bold text-slate-900 leading-tight"><?php the_author(); ?></p>
                         <p class="text-xs text-slate-500 leading-tight">Productor · Animatek</p>
                     </div>
                 </div>
