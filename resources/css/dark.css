@@ -122,6 +122,77 @@
 
 /* === TUTOR LMS === */
 
+/* Dashboard y layout general */
+[data-theme="dark"] .tutor-wrap,
+[data-theme="dark"] .tutor-dashboard,
+[data-theme="dark"] .tutor-dashboard-content,
+[data-theme="dark"] .tutor-dashboard-sidebar {
+    background-color: #1e1e2e !important;
+    color: #e2e8f0 !important;
+}
+
+/* Sidebar nav */
+[data-theme="dark"] .tutor-dashboard-sidebar-nav a {
+    color: #cbd5e1 !important;
+}
+[data-theme="dark"] .tutor-dashboard-sidebar-nav a:hover,
+[data-theme="dark"] .tutor-dashboard-sidebar-nav .tutor-is-active a {
+    color: #2C7FFF !important;
+}
+
+/* Cards de cursos */
+[data-theme="dark"] .tutor-card,
+[data-theme="dark"] .tutor-course-card,
+[data-theme="dark"] .tutor-course-card-body,
+[data-theme="dark"] .tutor-course-card-header {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Textos secundarios */
+[data-theme="dark"] .tutor-color-muted,
+[data-theme="dark"] .tutor-fs-7 {
+    color: #94a3b8 !important;
+}
+
+/* Tablas y listas */
+[data-theme="dark"] .tutor-table th,
+[data-theme="dark"] .tutor-table td {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+    color: #e2e8f0 !important;
+}
+[data-theme="dark"] .tutor-table thead th {
+    background-color: #16162a !important;
+}
+
+/* Progress bar background */
+[data-theme="dark"] .tutor-progress-bar {
+    background-color: #3a3a52 !important;
+}
+
+/* Botones Tutor */
+[data-theme="dark"] .tutor-btn-outline-primary {
+    color: #2C7FFF !important;
+    border-color: #2C7FFF !important;
+    background-color: transparent !important;
+}
+
+/* Single course */
+[data-theme="dark"] .tutor-course-sidebar,
+[data-theme="dark"] .tutor-lead-info {
+    background-color: #2a2a3e !important;
+    border-color: #3a3a52 !important;
+}
+[data-theme="dark"] .tutor-course-topic {
+    background-color: #252538 !important;
+    border-color: #3a3a52 !important;
+}
+[data-theme="dark"] .tutor-course-topic-title {
+    color: #e2e8f0 !important;
+}
+
 /* === FLUENT FORM === */
 
 /* === SIMPLY SCHEDULE APPOINTMENTS === */
