@@ -2,9 +2,19 @@
 
 All notable changes to TailPress will be documented in this file.
 
-## Unreleased
+## [5.1.0] - 2026-04-16
 
-## 5.0.0
+### Added
+- **Hero Editorial B1**: New header structure for posts with image on the left and metadata on the right.
+- **Post Navigation**: Smooth post-to-post navigation aligned with content column.
+- **Pill Chips**: Styled tags and categories with "pill" format and micro-interactions.
+- **Blog Redesign**: Complete overhaul of the post layout for better visual hierarchy.
+
+### Fixed
+- Padding and gap classes in hero metadata columns.
+- Alignment issues in editorial components.
+
+## [5.0.0] - 2025-10-24
 
 - Major update to default styling and template files
 - Vite as default compiler ([docs](https://tailpress.io/docs/5.0/vite))
