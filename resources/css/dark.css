@@ -27,6 +27,9 @@
 [data-theme="dark"] .bg-slate-200 { background-color: #1e1e2e !important; }
 [data-theme="dark"] .bg-zinc-50 { background-color: #1e1e2e !important; }
 [data-theme="dark"] .bg-zinc-100 { background-color: #252538 !important; }
+[data-theme="dark"] .bg-gray-50 { background-color: #1e1e2e !important; }
+[data-theme="dark"] .bg-gray-100 { background-color: #252538 !important; }
+[data-theme="dark"] .bg-gray-200 { background-color: #1e1e2e !important; }
 [data-theme="dark"] .bg-slate-50\/80 { background-color: #252538cc !important; }
 [data-theme="dark"] .bg-slate-50\/50 { background-color: #25253880 !important; }
 [data-theme="dark"] .bg-slate-100\/50 { background-color: #25253880 !important; }
@@ -79,6 +82,14 @@
 [data-theme="dark"] .border-emerald-100 { border-color: #0f3828 !important; }
 [data-theme="dark"] .border-amber-100 { border-color: #3d2e0f !important; }
 
+/* Step cards "Cómo funcionan las clases" (page-clases-privadas)
+   Forzamos fondo neutro en la tarjeta exterior con borde azul sutil. El ícono
+   interior conserva su tinte primary porque no lleva la clase .step-card. */
+[data-theme="dark"] .step-card {
+    background-color: #2a2a3e !important;
+    border-color: #1e3a5f !important;
+}
+
 /* Gradientes claros → gradientes oscuros (override directo de background-image) */
 [data-theme="dark"] .bg-gradient-to-br.from-slate-50,
 [data-theme="dark"] .bg-gradient-to-br.from-slate-100 {
@@ -101,21 +112,28 @@
 
 /* Textos claros → texto oscuro */
 [data-theme="dark"] .text-slate-900,
-[data-theme="dark"] .text-zinc-900 { color: #e2e8f0 !important; }
+[data-theme="dark"] .text-zinc-900,
+[data-theme="dark"] .text-gray-900 { color: #e2e8f0 !important; }
 [data-theme="dark"] .text-slate-800,
-[data-theme="dark"] .text-zinc-800 { color: #cbd5e1 !important; }
+[data-theme="dark"] .text-zinc-800,
+[data-theme="dark"] .text-gray-800 { color: #cbd5e1 !important; }
 [data-theme="dark"] .text-slate-700,
-[data-theme="dark"] .text-zinc-700 { color: #94a3b8 !important; }
+[data-theme="dark"] .text-zinc-700,
+[data-theme="dark"] .text-gray-700 { color: #94a3b8 !important; }
 [data-theme="dark"] .text-slate-600,
-[data-theme="dark"] .text-zinc-600 { color: #94a3b8 !important; }
-[data-theme="dark"] .text-slate-500 { color: #64748b !important; }
+[data-theme="dark"] .text-zinc-600,
+[data-theme="dark"] .text-gray-600 { color: #94a3b8 !important; }
+[data-theme="dark"] .text-slate-500,
+[data-theme="dark"] .text-gray-500 { color: #64748b !important; }
 [data-theme="dark"] .text-black { color: #e2e8f0 !important; }
 
 /* Bordes */
 [data-theme="dark"] .border-slate-200,
-[data-theme="dark"] .border-zinc-200 { border-color: #3a3a52 !important; }
+[data-theme="dark"] .border-zinc-200,
+[data-theme="dark"] .border-gray-200 { border-color: #3a3a52 !important; }
 [data-theme="dark"] .border-slate-100,
-[data-theme="dark"] .border-zinc-100 { border-color: #2a2a3e !important; }
+[data-theme="dark"] .border-zinc-100,
+[data-theme="dark"] .border-gray-100 { border-color: #2a2a3e !important; }
 
 /* Headings */
 [data-theme="dark"] h1,
@@ -216,6 +234,24 @@
 
 /* === TUTOR LMS === */
 
+/* Override de las variables CSS de Tutor LMS para que cualquier
+   borde/divisor del plugin herede colores acordes al dark mode,
+   incluso en elementos que no tenemos reglas específicas para ellos. */
+[data-theme="dark"] .tutor-wrap,
+[data-theme="dark"] .tutor-dashboard,
+[data-theme="dark"] body {
+    --tutor-border-color: #3a3a52;
+    --tutor-color-black: #e2e8f0;
+    --tutor-color-subdued: #94a3b8;
+    --tutor-color-muted: #94a3b8;
+    --tutor-color-gray-10: #2a2a3e;
+    --tutor-color-gray-20: #3a3a52;
+    --tutor-color-gray-30: #475063;
+    --tutor-color-gray-40: #64748b;
+    --tutor-body-bg: #1e1e2e;
+    --tutor-body-color: #e2e8f0;
+}
+
 /* Dashboard y layout general */
 [data-theme="dark"] .tutor-wrap,
 [data-theme="dark"] .tutor-dashboard,
@@ -225,6 +261,17 @@
     color: #e2e8f0 !important;
 }
 
+/* Catch-all de bordes claros en cualquier descendiente del dashboard.
+   Tutor usa muchas combinaciones .tutor-border-*, #fff directo, etc.
+   Forzamos el tono del dark mode. */
+[data-theme="dark"] .tutor-dashboard [style*="border"],
+[data-theme="dark"] .tutor-dashboard [class*="tutor-border"],
+[data-theme="dark"] .tutor-dashboard hr,
+[data-theme="dark"] .tutor-dashboard-header,
+[data-theme="dark"] .tutor-dashboard-content-header {
+    border-color: #3a3a52 !important;
+}
+
 /* Sidebar nav */
 [data-theme="dark"] .tutor-dashboard-sidebar-nav a {
     color: #cbd5e1 !important;
@@ -232,6 +279,22 @@
 [data-theme="dark"] .tutor-dashboard-sidebar-nav a:hover,
 [data-theme="dark"] .tutor-dashboard-sidebar-nav .tutor-is-active a {
     color: #2C7FFF !important;
+}
+
+/* Menú izquierdo del dashboard: bordes y divisores demasiado claros */
+[data-theme="dark"] .tutor-dashboard-left-menu,
+[data-theme="dark"] .tutor-dashboard-left-menu * {
+    border-color: #3a3a52 !important;
+}
+[data-theme="dark"] .tutor-dashboard-left-menu a,
+[data-theme="dark"] .tutor-dashboard-left-menu li {
+    color: #cbd5e1 !important;
+}
+[data-theme="dark"] .tutor-dashboard-left-menu a:hover,
+[data-theme="dark"] .tutor-dashboard-left-menu .active a,
+[data-theme="dark"] .tutor-dashboard-left-menu .tutor-is-active a {
+    color: #2C7FFF !important;
+    background-color: #2a2a3e !important;
 }
 
 /* Cards de cursos */

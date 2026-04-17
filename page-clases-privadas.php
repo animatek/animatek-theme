@@ -71,23 +71,23 @@ get_header();
                     'title' => 'Diagnóstico y plan',
                     'desc'  => 'Analizo tu nivel, tu flujo y tus bloqueos. Preparo un plan de sesiones adaptado a ti.',
                     'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>',
-                    'color' => 'bg-amber-50 text-amber-600 border-amber-200',
+                    'color' => 'bg-primary/10 text-primary border-primary/20',
                 ],
                 [
                     'title' => 'Sesiones 1:1 por videollamada',
                     'desc'  => 'Trabajamos sobre tu proyecto real. Nada de plantillas: cada sesión se diseña para lo que necesitas esa semana.',
                     'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>',
-                    'color' => 'bg-emerald-50 text-emerald-600 border-emerald-200',
+                    'color' => 'bg-primary/10 text-primary border-primary/20',
                 ],
                 [
                     'title' => 'Seguimiento entre sesiones',
                     'desc'  => 'Tareas concretas, soporte por email/Discord y ajustes sobre la marcha para que avances de verdad.',
                     'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>',
-                    'color' => 'bg-rose-50 text-rose-600 border-rose-200',
+                    'color' => 'bg-primary/10 text-primary border-primary/20',
                 ],
             ];
             foreach ($steps as $i => $step): ?>
-                <div class="group bg-white border-2 <?php echo esc_attr($step['color']); ?> rounded-2xl p-8 hover:shadow-lg transition-all relative overflow-hidden">
+                <div class="group step-card bg-white border-2 <?php echo esc_attr($step['color']); ?> rounded-2xl p-8 hover:shadow-lg transition-all relative overflow-hidden">
                     <!-- Decorative number -->
                     <div class="absolute top-4 right-4 text-6xl font-black opacity-5"><?php echo $i + 1; ?></div>
                     
