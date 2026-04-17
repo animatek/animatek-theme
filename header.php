@@ -63,8 +63,7 @@
     (function() {
         var t = null;
         try { t = localStorage.getItem('animatek-theme'); } catch(e) {}
-        var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (t === 'dark' || (!t && d)) {
+        if (t !== 'light') {
             document.documentElement.setAttribute('data-theme', 'dark');
         }
     })();

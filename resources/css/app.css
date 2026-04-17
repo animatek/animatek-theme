@@ -36,11 +36,11 @@
     }
 
     a {
-        @apply text-[#F02B6A] no-underline transition-colors duration-150;
+        @apply text-[#2C7FFF] no-underline transition-colors duration-150;
     }
 
     a:hover {
-        @apply text-[#F02B6A]/80;
+        @apply text-[#2C7FFF]/80;
     }
 
     h1 {

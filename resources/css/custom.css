@@ -43,12 +43,12 @@
   }
 
   :where(a) {
-    color: #F02B6A;
+    color: #2C7FFF;
     text-decoration: none;
   }
 
   :where(a:hover) {
-    color: #d91e5c;
+    color: #1f6fe5;
   }
 
   :where(li) {
