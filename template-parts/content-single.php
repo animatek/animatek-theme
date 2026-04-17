@@ -110,10 +110,11 @@ $cat_palette = [
             ]);
             ?>
         </div>
-        <?php get_template_part('template-parts/block-explora'); ?>
     </div>
 
-    <nav class="mt-8 pb-8 max-w-[720px] mx-auto">
+    <?php get_template_part('template-parts/block-explora'); ?>
+
+    <nav class="mt-8 pb-8">
         <div class="grid gap-3 md:grid-cols-2">
             <div class="bg-white border border-slate-200 rounded-2xl p-4 hover:-translate-y-0.5 transition">
                 <?php previous_post_link(

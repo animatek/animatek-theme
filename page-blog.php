@@ -4,16 +4,16 @@ get_header();
 ?>
 
 <main id="primary" class="bg-slate-200 text-slate-900">
-    <section class="animatek-hero-section relative overflow-hidden px-6 sm:px-10 py-12 sm:py-14 text-slate-50 mb-6 sm:mb-8" style="background-image: linear-gradient(135deg, rgba(15,23,42,0.88), rgba(15,23,42,0.65)), url('https://animatek.net/wp-content/uploads/2025/05/Bono_hora.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section class="animatek-hero-section relative overflow-hidden px-6 sm:px-10 py-12 sm:py-16 text-slate-50 mb-6 sm:mb-8" style="background-image: linear-gradient(135deg, rgba(15,23,42,0.88), rgba(15,23,42,0.65)), url('https://animatek.net/wp-content/uploads/2025/05/Bono_hora.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="max-w-5xl mx-auto text-center relative z-10 space-y-5">
             <div class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold tracking-[0.2em] uppercase border border-white/20 rounded-full bg-white/10 text-white shadow-sm backdrop-blur-sm">
                 Blog
             </div>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white tracking-tight">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white tracking-tight">
                 Artículos, directos y procesos
             </h1>
-            <p class="text-lg sm:text-xl text-slate-200 leading-relaxed max-w-3xl mx-auto">
-                Bitácora sonora: producción musical en Linux, Bitwig, VCV Rack, directos técnicos y aprendizajes que puedes aplicar ya.
+            <p class="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto">
+                Bitácora sonora: producción musical en Linux, Bitwig y VCV Rack.
             </p>
         </div>
     </section>
@@ -29,13 +29,101 @@ get_header();
 
         $blog_query = new WP_Query([
             'post_type'      => 'post',
-            'posts_per_page' => 3,
+            'posts_per_page' => 7,
             'paged'          => $paged,
         ]);
 
-        if ($blog_query->have_posts()) : ?>
-            <div class="grid gap-6 md:gap-7 lg:gap-8 md:grid-cols-3 mt-4">
-                <?php while ($blog_query->have_posts()) : $blog_query->the_post(); ?>
+        $cat_palette = [
+            'bg-primary/10 text-primary border-primary/20',
+            'bg-amber-100 text-amber-800 border-amber-200',
+            'bg-emerald-100 text-emerald-800 border-emerald-200',
+            'bg-rose-100 text-rose-700 border-rose-200',
+            'bg-cyan-100 text-cyan-800 border-cyan-200',
+        ];
+
+        if ($blog_query->have_posts()) :
+            $show_featured = ($paged === 1);
+            $post_index = 0; ?>
+
+            <?php while ($blog_query->have_posts()) : $blog_query->the_post();
+                $is_featured = ($show_featured && $post_index === 0); ?>
+
+                <?php if ($is_featured) : ?>
+                    <!-- TARJETA DESTACADA (primera página, post más reciente) -->
+                    <article <?php post_class('group grid md:grid-cols-2 gap-0 rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:shadow-xl transition mb-8'); ?>>
+                        <div class="relative h-64 md:h-auto md:min-h-[320px] overflow-hidden">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <a href="<?php the_permalink(); ?>" class="block h-full">
+                                    <?php the_post_thumbnail('large', [
+                                        'class'   => 'w-full h-full object-cover transition-transform duration-500 group-hover:scale-105',
+                                        'loading' => 'eager',
+                                    ]); ?>
+                                </a>
+                            <?php else : ?>
+                                <div class="h-full w-full bg-gradient-to-br from-primary/20 via-slate-100 to-cyan-100 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-primary/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 7h14M5 12h9m-9 5h14"/>
+                                    </svg>
+                                </div>
+                            <?php endif; ?>
+                            <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-bold rounded-full bg-primary text-white uppercase tracking-[0.18em] shadow-lg">
+                                ★ Destacado
+                            </span>
+                        </div>
+
+                        <div class="flex flex-col justify-center p-6 md:p-8 gap-4">
+                            <div class="flex items-center justify-between gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                                <?php $categories = get_the_category();
+                                if (!empty($categories)) : ?>
+                                    <div class="flex flex-wrap gap-2">
+                                        <?php $cat_index = 0;
+                                        foreach (array_slice($categories, 0, 2) as $category) :
+                                            $palette_class = $cat_palette[$cat_index % count($cat_palette)];
+                                            $cat_index++; ?>
+                                            <span class="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-semibold rounded-full border <?php echo esc_attr($palette_class); ?>">
+                                                <span aria-hidden="true">#</span><?php echo esc_html($category->name); ?>
+                                            </span>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+                                <time datetime="<?php echo esc_attr(get_the_date('c')); ?>" class="text-[11px] uppercase tracking-[0.18em] text-slate-500">
+                                    <?php echo esc_html(get_the_date('d M Y')); ?>
+                                </time>
+                            </div>
+
+                            <h2 class="text-2xl md:text-3xl font-extrabold leading-tight">
+                                <a href="<?php the_permalink(); ?>" class="line-clamp-3 !no-underline text-slate-900 hover:text-primary transition">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h2>
+
+                            <p class="text-base text-slate-600 line-clamp-3">
+                                <?php echo wp_kses_post(get_the_excerpt()); ?>
+                            </p>
+
+                            <div class="pt-2">
+                                <a href="<?php the_permalink(); ?>" class="btn-primary text-sm !no-underline">
+                                    Leer artículo completo
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <?php // Abrir el grid después del destacado, solo si hay más posts
+                    if ($blog_query->post_count > 1) : ?>
+                        <div class="grid gap-6 md:gap-7 lg:gap-8 md:grid-cols-2 lg:grid-cols-3 mt-4">
+                    <?php endif; ?>
+
+                <?php else : ?>
+                    <?php // Si no hay destacado (páginas >1), abrir el grid en la primera iteración
+                    if (!$show_featured && $post_index === 0) : ?>
+                        <div class="grid gap-6 md:gap-7 lg:gap-8 md:grid-cols-2 lg:grid-cols-3 mt-4">
+                    <?php endif; ?>
+
+                    <!-- TARJETA REGULAR -->
                     <article <?php post_class('group flex flex-col rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-lg transition'); ?>>
                         <div class="relative h-44 md:h-48 overflow-hidden">
                             <?php if (has_post_thumbnail()) : ?>
@@ -60,27 +148,15 @@ get_header();
 
                         <div class="flex-1 flex flex-col p-5">
                             <div class="mb-3 flex items-center justify-between gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-                                <?php
-                                $categories = get_the_category();
-                                if (!empty($categories)) :
-                                    $cat_palette = [
-                                        'bg-primary/10 text-primary border-primary/20',
-                                        'bg-amber-100 text-amber-800 border-amber-200',
-                                        'bg-emerald-100 text-emerald-800 border-emerald-200',
-                                        'bg-rose-100 text-rose-700 border-rose-200',
-                                        'bg-cyan-100 text-cyan-800 border-cyan-200',
-                                    ];
-                                    ?>
+                                <?php $categories = get_the_category();
+                                if (!empty($categories)) : ?>
                                     <div class="flex flex-wrap gap-2">
-                                        <?php
-                                        $index = 0;
+                                        <?php $cat_index = 0;
                                         foreach (array_slice($categories, 0, 2) as $category) :
-                                            $palette_class = $cat_palette[$index % count($cat_palette)];
-                                            $index++;
-                                            ?>
+                                            $palette_class = $cat_palette[$cat_index % count($cat_palette)];
+                                            $cat_index++; ?>
                                             <span class="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-semibold rounded-full border <?php echo esc_attr($palette_class); ?>">
-                                                <span aria-hidden="true">#</span>
-                                                <?php echo esc_html($category->name); ?>
+                                                <span aria-hidden="true">#</span><?php echo esc_html($category->name); ?>
                                             </span>
                                         <?php endforeach; ?>
                                     </div>
@@ -112,8 +188,16 @@ get_header();
                             </div>
                         </div>
                     </article>
-                <?php endwhile; ?>
-            </div>
+                <?php endif; ?>
+
+                <?php $post_index++;
+            endwhile; ?>
+
+            <?php // Cerrar el grid si se abrió
+            $grid_was_opened = ($show_featured && $blog_query->post_count > 1) || (!$show_featured && $blog_query->post_count > 0);
+            if ($grid_was_opened) : ?>
+                </div>
+            <?php endif; ?>
 
             <?php
             $pagination = paginate_links([
